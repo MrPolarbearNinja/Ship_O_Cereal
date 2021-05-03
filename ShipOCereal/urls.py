@@ -2,5 +2,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', admin.site.urls),
+    ## http://localhost:8000/ShipOCereal
+    path('', views.index, name="index"),
 ]
