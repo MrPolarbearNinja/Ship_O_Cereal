@@ -27,3 +27,4 @@ urlpatterns = [
 """Bonjour, je m'appelle Nóri"""
 """HELLO"""
 """222"""
+"nytt test - nori"
