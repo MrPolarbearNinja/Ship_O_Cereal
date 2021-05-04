@@ -21,4 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('ShipOCereal/', include('ShipOCereal.urls')),
     path('catalogue/', include('catalogue.urls')),
+    path('productInfo/', include('product_info.urls')),
+    path('basket/', include('basket.urls')),
 ]
