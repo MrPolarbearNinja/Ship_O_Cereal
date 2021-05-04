@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  /* Header square */
+
+height: 100px;
+width: 100%;
+background: #7DA7D9;
+
+}
+
+
+
+.buttonAccount {
+  /* Header square */
+  position: absolute;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  
+  font-size: 16px;
+  float: right;
+  top:20px;
+  right: 30px;
+}
+.imgnav {
+  /* Vector */
+
+
+height: 100px;
+width: 150px;
+
+float: left;
+
+}
+.navtext {
+  margin: auto;
+  margin-top: 25px;
+  display: inline-block;
+  color: white;
+  font-size: 50px;
+  
+  float: left;
+}
+.navlocation {
+  margin-left: 20%;
+  color: white;
+  display: inline-block;
+  font-size: 50px;
+}
+
+
+.dropdown {
+  border-radius: 10px;
+  height: 60px;
+  float: right;
+  margin-top: 20px;
+  margin-right: 50px;
+  overflow: hidden;
+  background-color: #4CAF50;
+
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+
+
+.dropdown-content {
+  margin-top: 10px;
+  display: none;
+  position: absolute;
+  background-color: gray;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+#homebutton {
+  font-size: 40px;
+  color: white;
+  text-decoration: none;
+}
