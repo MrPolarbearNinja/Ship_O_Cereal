@@ -1,5 +1,4 @@
 div {
-    border: 1px solid black;
 }
 
 #main-container {
@@ -10,28 +9,61 @@ div {
 }
 
 #search-history {
-    background-color: chocolate;
+    position: fixed;
+    top: 150px;
+    left:50px;
+    background-color: #b5afb9;
     width: 10%;
+    height: 600px;
+}
+
+#search-history-title {
+    background-color: #bc8dc0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding-top: 1px;
+    font-size: 24px;
+    color: white;
+}
+
+#search-history-title p {
+    margin-top: 10px;
 }
 
 #catalogue {
-    background-color: cyan;
     margin-top: 5%;
-    width: 60%;
-    height: 700px;
+    width: 75%;
+    height: 1000px;
+    margin: auto;
 }
 
 #catalogue-list {
-    background-color: darkgrey;
-    width: 60%;
-    height: 70%;
+    background-color: #abc3df;
+    width: 90%;
+    height: 75%;
     margin: auto;
-    margin-top: 197px;
+    float: top;
+}
+#searchbar {
+    background-color: #7fa7da;
+    width: 90%;
+    height: 15%;
+    margin: auto;
+    margin-top: 50px;
+    float: top;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 
 
-
 #basket {
-    background-color: darkred;
+    background-color: #bc8dc0;
+    position: fixed;
+    bottom: 10px;
+    right:50px;
     width: 10%;
+    margin-right: auto;
+    height: 150px;
+    border-radius: 10px;
 }
