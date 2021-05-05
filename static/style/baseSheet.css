@@ -6,6 +6,7 @@ div {
     background-color: azure;
     display: flex;
     justify-content: space-between;
+    height: 100%;
 }
 
 #search-history {
@@ -17,11 +18,18 @@ div {
     background-color: cyan;
     margin-top: 5%;
     width: 60%;
+    height: 700px;
 }
 
 #catalogue-list {
     background-color: darkgrey;
+    width: 60%;
+    height: 70%;
+    margin: auto;
+    margin-top: 197px;
 }
+
+
 
 #basket {
     background-color: darkred;
