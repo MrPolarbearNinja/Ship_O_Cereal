@@ -13,3 +13,4 @@ class Items(models.Model):
 class Item_Stock(models.Model):
     item = models.ForeignKey(Item_Type, on_delete=models.CASCADE)
     quantity = models.FloatField()
+
