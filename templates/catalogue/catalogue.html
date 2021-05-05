@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'style/baseSheet.css' %}">
+</head>
+<body>
+    {% include 'nav.html' %}
+    {% block content %}
+    {% endblock %}
+
+<!-- Main container -->
+<div id="main-container">
+    <!-- History div-->
+    <div id="search-history">
+
+    </div>
+    <!-- Catalogue div -->
+    <div id="catalogue">
+        <!-- Search section div -->
+        <div id="searchbar">
+
+        </div>
+        <!-- Catalogue list div -->
+        <div id="catalogue-list">
+
+        </div>
+    </div>
+    <!-- Basket div -->
+    <div id="basket">
+
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+div {
+    border: 1px solid black;
+}
+
+#main-container {
+    background-color: azure;
+    display: flex;
+    justify-content: space-between;
+}
+
+#search-history {
+    background-color: chocolate;
+    width: 10%;
+}
+
+#catalogue {
+    background-color: cyan;
+    margin-top: 5%;
+    width: 60%;
+}
+
+#catalogue-list {
+    background-color: darkgrey;
+}
+
+#basket {
+    background-color: darkred;
+    width: 10%;
+}
