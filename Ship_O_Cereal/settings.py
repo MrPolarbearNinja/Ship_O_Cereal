@@ -39,6 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ShipOCereal.apps.ShipocerealConfig',
+    'account.apps.AccountConfig',
+    'basket.apps.BasketConfig',
+    'catalogue.apps.CatalogueConfig',
+    'checkout.apps.CheckoutConfig',
+    'history.apps.HistoryConfig',
+    'product_info.apps.ProductInfoConfig',
 ]
 
 MIDDLEWARE = [
