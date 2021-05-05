@@ -1,5 +1,12 @@
-<div calss="single_item">
+<div class="single_item">
     <a href="#">
-        <h1>{{ item.name }}</h1>
+
+        <div class="item_image">
+            <img src="{{ item.Items_Image.first.image_link}}">
+            <h4>{{ item.Items_Image.first.image_link }}</h4>
+        </div>
+        <div class="title">
+            <h4>{{ item.name }}</h4>
+        </div>
     </a>
 </div>

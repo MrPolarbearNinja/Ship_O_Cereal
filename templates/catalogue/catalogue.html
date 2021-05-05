@@ -27,7 +27,9 @@
         </div>
         <!-- Catalogue list div -->
         <div id="catalogue-list">
-
+            {% for item in Items %}
+                {% include 'catalogue/catalog_item.html' with item=item%}
+            {% endfor %}
         </div>
     </div>
     <!-- Basket div -->
