@@ -67,3 +67,35 @@ div {
     height: 150px;
     border-radius: 10px;
 }
+.single_item {
+    width: 200px;
+    height: 350px;
+    background-color:#7fa7da;
+    display: inline-block;
+    margin-right: 50px;
+    border-radius: 25px;
+     text-align: center;
+    text-decoration: none;
+    font-size: 1.5em;
+
+}
+img {
+  width: 200px;
+  height: 300px;
+    -webkit-transition: transform 1s ease-in-out;
+    -moz-transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out;
+}
+img:hover {
+    transform: scale(1.5);
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+.title {
+    margin-bottom: -50px;
+
+}

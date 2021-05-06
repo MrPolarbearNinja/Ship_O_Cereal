@@ -3,10 +3,11 @@
 
         <div class="item_image">
             <img src="{{ item.items_image_set.first.image_link}}">
-            <h4>{{ item.items_image_set.first.image_link }}</h4>
+
         </div>
         <div class="title">
-            <h4>{{ item.name }}</h4>
+            <a>{{ item.name }}</a>
+            <h4>{{ item.price }} kr</h4>
         </div>
     </a>
 </div>
