@@ -2,12 +2,12 @@
     <a href="#">
 
         <div class="item_image">
-            
-            <img src="{{ item.items_image_set.first.image_link}}">
-
+            <a href="/productInfo/{{ item.id }}">
+                <img src="{{ item.items_image_set.first.image_link}}">
+            </a>
         </div>
         <div class="title">
-            <a>{{ item.name }}</a>
+            <a>{{ item.name }} </a>
             <h4>{{ item.price }} kr</h4>
         </div>
     </a>

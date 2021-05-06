@@ -4,5 +4,5 @@ from product_info.models import Items
 
 # Create your views here.
 def index(request):
-    context = {'Items' : Items.objects.all().order_by('name')}
+    context = {'Items' : Items.objects.all().order_by('id')}
     return render(request, 'catalogue/catalogue.html', context)
