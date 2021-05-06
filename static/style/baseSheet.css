@@ -75,20 +75,21 @@ div {
     background-color:#7fa7da;
     display: inline-block;
     margin-right: 50px;
+    margin-top: 50px;
     border-radius: 25px;
      text-align: center;
     text-decoration: none;
     font-size: 1.5em;
 
 }
-img {
+.imgFrontPage {
   width: 200px;
   height: 300px;
     -webkit-transition: transform 1s ease-in-out;
     -moz-transition: transform 1s ease-in-out;
     transition: transform 1s ease-in-out;
 }
-img:hover {
+.imgFrontPage:hover {
     transform: scale(1.5);
     -moz-transform: scale(1.05);
     -webkit-transform: scale(1.05);
