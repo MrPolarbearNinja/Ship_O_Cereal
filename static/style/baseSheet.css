@@ -31,12 +31,15 @@ div {
     margin-top: 10px;
 }
 
-#catalogue {
+#center-box {
     background-color: #abc3df;
-    margin-top: 5%;
-    width: 75%;
+    position: relative;
+    top: 50px;
+    width: 70%;
     height: 1000px;
     margin: auto;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 
 #catalogue-list {
@@ -47,10 +50,9 @@ div {
 }
 #searchbar {
     background-color: #7fa7da;
-    width: 90%;
-    height: 15%;
+    width: 100%;
+    height: 100px;
     margin: auto;
-    margin-top: 50px;
     float: top;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
@@ -97,5 +99,4 @@ img:hover {
 }
 .title {
     margin-bottom: -50px;
-
 }

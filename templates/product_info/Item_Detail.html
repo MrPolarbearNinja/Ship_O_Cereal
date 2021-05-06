@@ -4,16 +4,14 @@
         <!-- History div-->
         {% include 'History_bar.html' %}
         <!-- Catalogue div -->
-        <div id="catalogue">
-            <!-- Search section div -->
-            <div id="searchbar">
-
-            </div>
-            <!-- Catalogue list div -->
-            <div id="catalogue-list">
-                {% for item in Items %}
-                    {% include 'catalogue/catalog_item.html' with item=item%}
-                {% endfor %}
+        <div id="center-box">
+            <div id="item_detail_box">
+                <div id="item_detail_img">
+                    <img src="{{ item.items_image_set.first.image_link }}">
+                </div>
+                <div id="item_description">
+                    <h1>{{  item.id  }}</h1>
+                </div>
             </div>
         </div>
         <!-- Basket div -->
