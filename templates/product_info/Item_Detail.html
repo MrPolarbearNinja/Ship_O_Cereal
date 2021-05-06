@@ -16,17 +16,7 @@
     <!-- History div-->
     {% include 'History_bar.html' %}
     <!-- Catalogue div -->
-    <div id="catalogue">
-        <!-- Search section div -->
-        <div id="searchbar">
-
-        </div>
-        <!-- Catalogue list div -->
-        <div id="catalogue-list">
-            {% for item in Items %}
-                {% include 'catalogue/catalog_item.html' with item=item%}
-            {% endfor %}
-        </div>
+    <div id="center-div">
     </div>
     <!-- Basket div -->
     {% include 'Basket_bar.html' %}
