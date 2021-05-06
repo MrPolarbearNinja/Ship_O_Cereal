@@ -8,5 +8,5 @@ class Account_Create_Form(ModelForm):
         exclude = ['id']
         widgets = {
             'username': widgets.TextInput(attrs={'class': 'form-control'}),
-            'password': widgets.TextInput(attrs={'class': 'form-control'})
+            'password': widgets.PasswordInput(attrs={'class': 'form-control'})
         }
