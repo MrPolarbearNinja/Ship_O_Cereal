@@ -46,7 +46,7 @@ h3 {
 
 #catalogue-list {
     width: 90%;
-    height: 75%;
+    height: 100%;
     margin: auto;
     float: top;
     text-align: center;
@@ -105,6 +105,7 @@ h3 {
 }
 .title {
     margin-bottom: -50px;
+    text-transform:capitalize;
 }
 
 #login_part {
