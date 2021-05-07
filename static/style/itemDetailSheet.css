@@ -1,0 +1,97 @@
+#item-detail-box div {
+    display: flex;
+}
+
+#item-detail-box {
+    flex-direction: column;
+    padding: 40px 30px;
+}
+
+#item-detail-box h {
+    margin-bottom: 0;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #557EAF;
+}
+
+/* ---------- */
+
+/* A */
+#item-detail-upper {
+
+}
+
+    /* AA */
+    #item-detail-img-div {
+    }
+
+    #item-detail-img {
+        border: 10px solid #bc8dc0;
+        border-radius: 10px;
+    }
+
+
+    /* AB */
+    #item-detail-product {
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 50px;
+        padding-right: 50px;
+        border-right: 2px solid #557EAF;
+    }
+
+        /* ABA */
+        #item-detail-title {
+            flex-direction: column;
+        }
+
+        #item-detail-title h1 {
+            margin-bottom: 0;
+            padding-bottom: 2px;
+            text-transform: capitalize;
+            border-bottom: 2px solid #557EAF;
+        }
+
+        #item-detail-title p {
+            margin-bottom: 0;
+            /*font-weight: 600;*/
+        }
+
+        /* ABB */
+        #item-detail-buttons {
+            height: 50px;
+        }
+
+            /* ABBA */
+            #item-detail-add-to-cart-button {
+                flex: 1;
+            }
+
+            /* ABBB */
+            #item-detail-quantity {
+                flex: 1
+            }
+
+
+
+    /* AC */
+    #item-detail-nutrients {
+        flex-grow: 1;
+        align-items: center;
+    }
+
+
+/* B */
+#item-detail-lower {
+    flex-direction: column;
+
+}
+
+#item-detail-lower h2 {
+    margin-bottom: 0;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #557EAF;
+}
+
+.arnor123 {
+    flex: 1;
+}

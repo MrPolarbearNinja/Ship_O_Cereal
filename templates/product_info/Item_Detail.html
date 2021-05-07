@@ -1,19 +1,96 @@
-
 {% extends 'base.html' %}
 {% block content %}
-        <!-- History div-->
-        {% include 'History_bar.html' %}
-        <!-- Catalogue div -->
-        <div id="center-box">
-            <div id="item_detail_box">
-                <div id="item_detail_img">
-                    <img src="{{ item.items_image_set.first.image_link }}">
+
+    <!-- History div -->
+    {% include 'History_bar.html' %}
+
+    <!-- Main div // Item detail box -->
+    <div id="center-box">
+        <div id="item-detail-box">
+
+            <!-- Upper section (A) // Details & Purchase -->
+            <div id="item-detail-upper">
+
+                <!-- First section (AA) // Image -->
+                <div id="item-detail-img-div">
+                    <img src="{{ item.items_image_set.first.image_link }}"
+                         alt="Image of {{  item.name  }}"
+                         id="item-detail-img">
                 </div>
-                <div id="item_description">
-                    <h1>{{  item.id  }}</h1>
+
+                <!-- Second section (AB) // Name & Purchase -->
+                <div id="item-detail-product">
+
+                    <!-- Upper (ABA) // Name & Status -->
+                    <div id="item-detail-title">
+                        <h1>{{  item.name  }}</h1>
+                        <p>PID: {{  item.id  }}</p> <!-- Product ID -->
+                        <p>Stock left: [int]</p>
+                    </div>
+
+                    <!-- Lower (ABB) // Buttons -->
+                    <div id="item-detail-buttons">
+                        <!-- ABBA -->
+                        <div id="item-detail-add-to-cart-button">
+                            <button>addtocart</button>
+                        </div>
+                        <!-- ABBB -->
+                        <div id="item-detail-cart-quantity">
+                            <button>increment</button>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Third section (AC) // Nutrients table -->
+                <div id="item-detail-nutrients">
+                    <table> <!-- Move to different file, if used? -->
+                        <tr>
+                            <th>Nutrients</th>
+                            <th>Amount</th>
+                        </tr>
+                        <tr>
+                            <td>Calories</td>
+                            <td>/CalAmount</td>
+                        </tr>
+                        <tr>
+                            <td>Fat</td>
+                            <td>/FatAmount</td>
+                        </tr>
+                        <tr>
+                            <td>Sugar</td>
+                            <td>/SugarAmount</td>
+                        </tr>
+                        <tr>
+                            <td>Protein</td>
+                            <td>/ProteinAmount</td>
+                        </tr>
+                        <tr>
+                            <td>Carbs</td>
+                            <td>/CarbAmount</td>
+                        </tr>
+                        <tr>
+                            <td>Calcium</td>
+                            <td>/CalciumAmount</td>
+                        </tr>
+                        <tr>
+                            <td>Iron</td>
+                            <td>/IronAmount</td>
+                        </tr>
+                    </table>
+                </div>
+
             </div>
+
+            <!-- Lower section (B) // Description -->
+            <div id="item-detail-lower">
+                <h2>Description</h2>
+                <p>{{  item.description }}</p>
+            </div>
+
         </div>
-        <!-- Basket div -->
-        {% include 'Basket_bar.html' %}
+    </div>
+
+    <!-- Basket div -->
+    {% include 'Basket_bar.html' %}
+
 {% endblock %}
