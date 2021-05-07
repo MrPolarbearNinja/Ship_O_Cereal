@@ -25,3 +25,5 @@ def create_account(request):
 
 def edit_account(request):
     return render(request, 'account_info/account_info.html')
+
+
