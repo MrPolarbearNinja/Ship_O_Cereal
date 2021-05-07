@@ -4,27 +4,20 @@
             <div id="login_part">
                 <h3>Login</h3>
                 <form action="/action_page.php">
-                    <input type="text" name="username" placeholder="Username"><br><br>
-                    <input type="password" name="password" placeholder="Password"><br><br>
-                    <input type="submit" value="Submit">
+                <input type="text" name="username" placeholder="Username"><br><br>
+                <input type="password" name="password" placeholder="Password"><br><br>
+                <input type="submit" value="Submit">
                 </form>
             </div>
             <div id="sign_up_part">
                 <h3>SignUp</h3>
 
 
-<<<<<<< HEAD
-                <form class="form_create_account" action=" url { % 'create_account' % }" method="post">
-                    <input type="text" name="username" placeholder="Username"><br><br>
-                    <input type="password" name="password" placeholder="Password"><br><br>
-                    <input type="submit" value="Submit">
-=======
                 <form class="form_create_account" action="{% url 'create_account' %}" method="post">
                     {% csrf_token %}
                 <input type="text" name="username" placeholder="Username"><br><br>
                 <input type="password" name="password" placeholder="Password"><br><br>
                 <input type="submit" value="Submit">
->>>>>>> 2d6a3f24dc047bc7e52620a9cdef0fcba7ef4c5c
                 </form>
             </div>
         </div>
