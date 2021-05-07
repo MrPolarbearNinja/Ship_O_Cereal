@@ -13,12 +13,17 @@ def index(request):
 
 def create_account(request):
     if request.method == 'POST':
+        print(1)
         form = Account_Create_Form(data=request.POST)
         if form.is_valid():
             user = form.save()
             return render(request, 'account_log_in/acount_login.html')
     else:
+        print(2)
         form = Account_Create_Form()
     return render(request, 'account_log_in/acount_login.html', {
         'form': form
     })
+
+def edit_account(request):
+    return render(request, 'account_info/account_info.html')

@@ -72,6 +72,9 @@ h3 {
     height: 150px;
     border-radius: 10px;
 }
+
+
+
 .single_item {
     width: 20%;
     height: 350px;
@@ -105,6 +108,7 @@ h3 {
 }
 .title {
     margin-bottom: -50px;
+    text-transform:capitalize;
 }
 
 #login_part {
