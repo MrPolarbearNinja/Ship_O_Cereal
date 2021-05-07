@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
 
 # Create your views here.
@@ -13,13 +14,11 @@ def index(request):
 
 def create_account(request):
     if request.method == 'POST':
-        print(1)
         form = Account_Create_Form(data=request.POST)
         if form.is_valid():
             user = form.save()
             return render(request, 'account_log_in/acount_login.html')
     else:
-        print(2)
         form = Account_Create_Form()
     return render(request, 'account_log_in/acount_login.html', {
         'form': form
@@ -27,3 +26,16 @@ def create_account(request):
 
 def edit_account(request):
     return render(request, 'account_info/account_info.html')
+
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(data=request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+    return render(request, 'account_log_in/register.html', {
+        'form': UserCreationForm()
+    })
+
+
+

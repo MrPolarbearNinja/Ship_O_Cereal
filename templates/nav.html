@@ -23,8 +23,14 @@
             </div>
             <div>
                 <ul class="nav-list">
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#" id="log-out">Log out</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="{% url 'logout' %}" id="log-out">Log out</a></li>
+                    {% else %}
+                        <li><a href="{% url 'login' %}">Login</a></li>
+                        <li><a href="{% url 'create_account' %}" id="log-out">Sign up</a></li>
+                    {% endif %}
+
                 </ul>
             </div>
         </div>
