@@ -27,7 +27,7 @@ def create_account(request):
 
 def edit_account(request):
     profile = User.objects.filter(user=request.user).first()
-    if request.method = 'POST':
+    if request.method == 'POST':
         print(1)
 
     return render(request, 'account_info/account_info.html', {
