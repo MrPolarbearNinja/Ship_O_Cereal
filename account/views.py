@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
+
+from account.forms.profile_form import Profile_Form
 from account.models import User
 
 # Create your views here.
@@ -28,10 +30,14 @@ def create_account(request):
 def edit_account(request):
     profile = User.objects.filter(user=request.user).first()
     if request.method == 'POST':
-        print(1)
-
+        form = Profile_Form(instance=profile, data=request.POST)
+        if form.is_valid():
+            profile = form.save(commit=False)
+            profile.user = request.user
+            profile.save()
+            return redirect('edit_account')
     return render(request, 'account_info/account_info.html', {
-        'form': ''
+        'form': Profile_Form(instance=profile)
     })
 
 def register(request):
