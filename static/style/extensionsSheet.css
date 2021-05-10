@@ -56,6 +56,11 @@
     right: 30px;
 }
 
+#bask-container:hover {
+    background-color: var(--purple-dark);
+    border-radius: 10px;
+}
+
 #bask-icon {
     align-items: center;
     padding-left: 30px;
