@@ -1,7 +1,16 @@
-<a href="/product-info/{{ item.id }}" class="cat-item">
+<a href="/product-info/{{ history.item.id }}" class="cat-item">
     <div class="cat-item-container">
-            <h4>TEST</h4>
+            <div class="cat-item-img-container">
+            <img src="{{ history.item.items_image_set.first.image_link}}"
+                 alt="Image of {{ history.item.name }}"
+                 class="cat-item-img"
+                 width="50px"
+                 height="70px">
+        </div>
+
+        <div class="cat-item-desc">
+            <h6>{{ history.item.name }}</h6>
+            <p>{{ history.item.price }} kr</p>
+        </div>
     </div>
 </a>
-<h4>TEST</h4>
-<script>console.log("TEST")</script>
