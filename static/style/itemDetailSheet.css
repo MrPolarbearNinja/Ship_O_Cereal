@@ -44,6 +44,14 @@
     margin-bottom: 0;
 }
 
+#itemdet-type {
+    align-items: center;
+}
+
+#itemdet-type img {
+    padding: 0 15px 0 5px;
+}
+
 /* LOWER */
 
 #itemdet-lower {
