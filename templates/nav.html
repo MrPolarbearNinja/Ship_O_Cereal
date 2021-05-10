@@ -16,7 +16,7 @@
     <div id="nav-list-container">
         <ul id="nav-list">
             {% if user.is_authenticated %}
-                <li><a href="#">My Account</a></li>
+                <li><a href="#">My account</a></li>
                 <li><a href="{% url 'logout' %}"><strong>Log out</strong></a></li>
             {% else %}
                 <li><a href="{% url 'login' %}">Log in</a></li>

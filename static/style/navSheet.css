@@ -27,21 +27,7 @@
     padding-left: 25px;
 }
 
-
 /* AB */
-#nav-current-page {
-    align-items: center;
-    flex-grow: 1;
-    padding-left: 40px;
-}
-
-#nav-current-page a {
-    font-size: 1.3rem;
-    font-weight: bold;
-}
-
-
-/* AC */
 #nav-list-container {
     align-items: center;
 }
