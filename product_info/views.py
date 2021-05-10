@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from product_info.models import Items
-
+from django.forms import ModelForm, widgets
+from history.models import History
+import time
 
 from history.forms.history_form import History_create
 
@@ -11,6 +13,10 @@ def index(request):
     return render(request, 'catalogue/catalogue.html', context)
 
 def get_item_by_id(request, id):
+    print(request.user.id)
+    print(id)
+    hist = History(time=time.time(),user_id=request.user.id,item_id=id)
+    hist.save()
     return render(request, 'product_info/item_detail.html', {
         'item' : get_object_or_404(Items, pk=id)
     })
