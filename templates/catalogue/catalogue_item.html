@@ -1,0 +1,18 @@
+<a href="/product-info/{{ item.id }}" class="cat-item">
+    <div class="cat-item-container">
+
+        <div class="cat-item-img-container">
+            <img src="{{ item.items_image_set.first.image_link}}"
+                 alt="Image of {{ item.name }}"
+                 class="cat-item-img"
+                 width="200px"
+                 height="290px">
+        </div>
+
+        <div class="cat-item-desc">
+            <h4>{{ item.name }}</h4>
+            <p>{{ item.price }} kr</p>
+        </div>
+
+    </div>
+</a>

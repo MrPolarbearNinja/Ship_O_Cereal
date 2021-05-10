@@ -1,39 +1,33 @@
 {% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{% static 'style/navSheet.css' %}">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <title>Ship O'Cereal</title>
-</head>
-<body>
-    <div class="header">
-        <a href="/" id="logo-anchor">
-            <div class="nav-logo">
-                <img src="{% static 'images/logo.svg' %}" alt="Ship O'Cereal Logo" id="logo-svg">
-                <h1>Ship O'Cereal</h1>
-            </div>
-        </a>
 
-        <div class="nav-container">
-            <div class="curr-page">
-                <h2>Catalogue</h2>
-            </div>
-            <div>
-                <ul class="nav-list">
-                    {% if user.is_authenticated %}
-                        <li><a href="#">My Account</a></li>
-                        <li><a href="{% url 'logout' %}" id="log-out">Log out</a></li>
-                    {% else %}
-                        <li><a href="{% url 'login' %}">Login</a></li>
-                        <li><a href="{% url 'create_account' %}" id="log-out">Sign up</a></li>
-                    {% endif %}
-
-                </ul>
-            </div>
+<div id="nav">
+    <!-- AA | Logo container -->
+    <a href="/" id="nav-logo">
+        <div>
+            <img src="{% static 'images/logo.svg' %}"
+                 alt="Ship O'Cereal Logo"
+                 width="35"
+                 height="35px">
+            <h1>Ship O'Cereal</h1>
         </div>
+    </a>
+
+    <!-- AB | Current page title -->
+    <div id="nav-current-page">
+        <a href="#">Catalogue</a> <!-- FIXME -->
     </div>
-</body>
-</html>
+
+    <!-- AC | List of links -->
+    <div id="nav-list-container">
+        <ul id="nav-list">
+            {% if user.is_authenticated %}
+                <li><a href="#">My Account</a></li>
+                <li><a href="{% url 'logout' %}"><strong>Log out</strong></a></li>
+            {% else %}
+                <li><a href="{% url 'login' %}">Log in</a></li>
+                <li><a href="{% url 'logout' %}"><strong>Sign up</strong></a></li> <!-- FIXME -->
+            {% endif %}
+        </ul>
+    </div>
+
+</div>

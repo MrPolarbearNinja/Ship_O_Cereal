@@ -1,3 +1,51 @@
+/* COLOR CONSTANTS */
+:root {
+    /* Colors from Material-UI palette (https://material-ui.com/customization/color/)
+       Use colors by writing ' color: var(--color); '*/
+
+    --blue: #42A5F5;			/* blue 400 */
+    --blue-dark: #1976D2;		/* blue 700 */
+    --blue-grey: #CFD8DC;		/* blueGrey 100 */
+    --black: #263238;			/* blueGrey 900 */
+    --purple: #CE93D8;			/* purple 200 */
+    --grey: #EEEEEE;			/* grey 200 */
+    --grey-dark: #757575;       /* grey 600 */
+
+    --white: #FFFFFF;			/* default */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+div {
+    display: flex;
+}
+
+#main-container {
+    flex-grow: 1;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
 h3 {
     color: white;
     font-size: 30px;
@@ -150,4 +198,4 @@ input[type=submit] {
 
 input[type=submit]:hover {
   background-color: #4dade5;
-}
+}*/

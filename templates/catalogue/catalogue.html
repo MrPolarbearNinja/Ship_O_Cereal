@@ -1,21 +1,23 @@
-
 {% extends 'base.html' %}
 {% block content %}
-        <!-- History div-->
-        {% include 'History_bar.html' %}
-        <!-- Catalogue div -->
-        <div id="center-box">
-            <!-- Search section div -->
-            <div id="searchbar">
 
-            </div>
-            <!-- Catalogue list div -->
-            <div id="catalogue-list">
-                {% for item in Items %}
-                    {% include 'catalogue/catalog_item.html' with item=item%}
-                {% endfor %}
-            </div>
+    <!-- History div-->
+    {% include 'history_bar.html' %}
+
+    <!-- Catalogue div -->
+    <div id="cat-container">
+        <div id="cat-search-container">
+            <h2>Search</h2>
         </div>
-        <!-- Basket div -->
-        {% include 'Basket_bar.html' %}
+
+        <div id="cat-list">
+            {% for item in Items %}
+                {% include 'catalogue/catalogue_item.html' with item=item%}
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Basket div -->
+    {% include 'basket_button.html' %}
+
 {% endblock %}

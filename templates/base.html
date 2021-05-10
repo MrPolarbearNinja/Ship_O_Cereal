@@ -6,9 +6,12 @@
     <title>Ship O'Cereal</title>
     <link rel="icon" href="{% static 'images/icon.png' %}">
 
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
     <!-- CSS Files -->
-    <link rel="stylesheet" href="{% static 'style/baseSheet.css' %}">
-    <link rel="stylesheet" href="{% static 'style/itemDetailSheet.css' %}">
+    {% include 'css_file_links.html' %}
 </head>
 <body>
     {% include 'nav.html' %}
