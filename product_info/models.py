@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 class Item_Type(models.Model):
     name = models.CharField(max_length=255)
+    image = models.CharField(max_length=255, blank=True)
 
 class Items(models.Model):
     name = models.CharField(max_length=255)
