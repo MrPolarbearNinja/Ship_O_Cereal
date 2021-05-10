@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:postgresql://34.105.232.43:5432/ship-o-cereal-db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="ship-o-cereal-db2@34.105.232.43" uuid="aa47ef67-70cc-40a1-a6d0-b88e2aca7fd0">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://34.105.232.43:5432/ship-o-cereal-db2</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

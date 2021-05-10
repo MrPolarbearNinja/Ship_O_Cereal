@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
         <div id="center-box">
-        <h1>ID</h1>
+        <h1>{{ user.name }}</h1>
             <div id="account_box">
                 <form method="post">
                     {% csrf_token %}
