@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
         <div id="center-box">
+        <h1>ID</h1>
             <div id="account_box">
-                <form action="/action_page.php">
+                <form action="/action_page.php" method="post">
+                    {% csrf_token %}
                     <label for="username">Username:</label>
                     <input type="text" name="username" placeholder="Username"><br><br>
                     <label for="fname">First name:</label>
