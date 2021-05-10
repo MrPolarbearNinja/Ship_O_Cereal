@@ -3,19 +3,10 @@
         <div id="center-box">
         <h1>ID</h1>
             <div id="account_box">
-                <form action="/action_page.php" method="post">
+                <form method="post">
                     {% csrf_token %}
-                    <label for="username">Username:</label>
-                    <input type="text" name="username" placeholder="Username"><br><br>
-                    <label for="fname">First name:</label>
-                    <input type="text" name="fname" placeholder="First"><br><br>
-                    <label for="lname">Last name:</label>
-                    <input type="text" name="lname" placeholder="Last"><br><br>
-                    <label for="picture">User Picture URL:</label>
-                    <input type="text" name="picture" placeholder="Picture URL"><br><br>
-                    <label for="password">New Password:</label>
-                    <input type="password" name="password" placeholder="Password"><br><br>
-                    <input type="submit" value="Submit">
+                    {{ form }}
+                    <input type="submit">
                 </form>
             </div>
         </div>
