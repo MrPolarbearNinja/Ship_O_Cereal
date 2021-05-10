@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from product_info.models import Items
+from history.models import History
 from django.http import JsonResponse
 
 
@@ -12,6 +13,5 @@ def index(request):
         search_type = request.GET['search_type']
         context = {'Items': Items.objects.filter(type=search_type)}
     else:
-        context = {'Items' : Items.objects.all()
-            .order_by('id')}
+        context = {'Items' : Items.objects.all().order_by('id'), 'History': History.objects.all()}
     return render(request, 'catalogue/catalogue.html', context)
