@@ -24,8 +24,12 @@
                 <li><a href="{% url 'profile' %}">My account</a></li>
                 <li><a href="{% url 'logout' %}"><strong>Log out</strong></a></li>
             {% else %}
-                <li><a href="{% url 'login' %}">Log in</a></li>
-                <li><a href="{% url 'register' %}"><strong>Sign up</strong></a></li> <!-- FIXME -->
+                {% if request.path != '/account/login'%}
+                    <li><a href="{% url 'login' %}">Log in</a></li>
+                {% endif %}
+                {% if request.path != '/account/register' %}
+                    <li><a href="{% url 'register' %}"><strong>Sign up</strong></a></li>
+                {% endif %}
             {% endif %}
         </ul>
     </div>
