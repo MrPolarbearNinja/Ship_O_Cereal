@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from account.forms.profile_form import Profile_Form
 from account.models import User
 from account.forms.account_form import Account_Create_Form
-
+print(user.id)
 
 def index(request):
     form = Account_Create_Form()
@@ -33,7 +33,7 @@ def Profile(request):
             profile.save()
             return redirect('profile')
     return render(request, 'account_info/account_info.html', {
-        'form': Profile_Form()
+        'form': Profile_Form(instance=profile),
     })
 
 def register(request):

@@ -1,5 +1,4 @@
 from django.db import models
-from account.models import User
 from product_info.models import Items
 from django.contrib.auth.models import User
 

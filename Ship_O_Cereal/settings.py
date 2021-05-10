@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'Ship_O_Cereal.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ship-o-cereal-db',
+        'NAME': 'ship-o-cereal-db2',
         'USER': 'ship-o-cereal-db-user',
         'PASSWORD': 'shipo',
         'HOST': '34.105.232.43',
