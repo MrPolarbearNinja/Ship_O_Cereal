@@ -2,11 +2,14 @@ from django.forms import ModelForm, widgets
 from history.models import History
 
 
-class History_create(ModelForm):
+
+class History_create():
     class Meta:
         model = History
+        exclude = ['id']
         widgets = {
-            'id': {{item.id}},
-            'date': '20:20',
-            'user_id': {{user.id}}
+            'date': 1111,
+            'user_id': {{user.id}},
+            'item_id': {{item.id}}
+
         }

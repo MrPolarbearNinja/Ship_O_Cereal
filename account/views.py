@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from account.forms.profile_form import Profile_Form
 from account.models import User
 from account.forms.account_form import Account_Create_Form
-
+print(user.id)
 
 def index(request):
     form = Account_Create_Form()
