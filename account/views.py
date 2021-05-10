@@ -33,7 +33,7 @@ def Profile(request):
             profile.save()
             return redirect('profile')
     return render(request, 'account_info/account_info.html', {
-        'form': Profile_Form(instance=profile)
+        'form': Profile_Form(instance=profile),
     })
 
 def register(request):

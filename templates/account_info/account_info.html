@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
         <div id="center-box">
-        <h1>{{ user.user_set.first.image }}</h1>
             <div id="account_box">
                 <form method="post">
                     {% csrf_token %}
@@ -9,5 +8,6 @@
                     <input type="submit">
                 </form>
             </div>
+            <div><img src="{{ user.user.image }}" width="400px" height="400px"></div>
         </div>
 {% endblock %}
