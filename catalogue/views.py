@@ -7,8 +7,10 @@ from django.http import JsonResponse
 def index(request):
     if 'search_filter' in request.GET:
         search_filter = request.GET['search_filter']
-        print(search_filter)
         context = {'Items': Items.objects.filter(name__contains=search_filter)}
+    if 'search_type' in request.GET:
+        search_type = request.GET['search_type']
+        context = {'Items': Items.objects.filter(type=search_type)}
     else:
         context = {'Items' : Items.objects.all()
             .order_by('id')}

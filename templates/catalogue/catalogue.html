@@ -8,10 +8,18 @@
     <div id="cat-container">
         <div id="cat-search-container">
             <h2>Search</h2>
-            <form method="GET">
+            <form>
                 <input type="search" id="search-box" placeholder="Enter item name here...">
-                <input type="submit">
+                <input type="radio" id="radio-sugary" name="gender" value="male">
+                <label for="radio-sugary">Sugary</label><br>
+                <input type="radio" id="radio-vegan" name="gender" value="female">
+                <label for="female">Vegan</label><br>
+                <input type="radio" id="radio-healthy" name="gender" value="other">
+                <label for="other">Healthy</label>
+                <input type="radio" id="radio-low-carb" name="gender" value="other">
+                <label for="other">Low-Carb</label>
             </form>
+            <button onclick="search_items()">Search</button>
         </div>
 
         <div id="cat-list">
