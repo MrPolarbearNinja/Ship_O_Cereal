@@ -3,6 +3,8 @@
         <h2>History</h2>
     </div>
     <div id="hist-list">
-        <p id="hist-empty">List is empty.</p>
+        {% for history in History %}
+                {% include '/history_item.html' with history=history%}
+            {% endfor %}
     </div>
 </div>
