@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-
+from basket.models import Basket
+from product_info.models import Items
 # Create your views here.
 def index(request):
-    return HttpResponse('Hello from Basket')
+    context = {'basket': Basket.objects.all().filter(user=request.user.id)}
+    return render(request, 'basket/basket.html', context)

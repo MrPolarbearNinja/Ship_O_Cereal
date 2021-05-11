@@ -3,7 +3,7 @@
         <h2>History</h2>
     </div>
     <div id="hist-list">
-        {% for history in History %}
+        {% for history in history %}
             {% include 'history/history_item.html' with history=history%}
         {% endfor %}
     </div>

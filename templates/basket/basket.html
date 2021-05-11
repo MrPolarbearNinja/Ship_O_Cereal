@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <!-- Main div // Item detail box -->
+    <div id="basket-container">
+        {% for item in basket %}
+            {% include 'basket/basket_item.html' with bitem=item%}
+        {% endfor %}
+    </div>
+{% endblock %}
