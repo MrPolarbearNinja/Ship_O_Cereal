@@ -1,27 +1,66 @@
 /* Log in */
 
-#login-container {
+#account-container {
     flex-direction: column;
+    justify-content: space-between;
     margin: 75px 0 30px 0;
-    width: 60%;
+    width: 800px;
+    height: 400px;
+    padding: 0 30px;
     background-color: var(--grey);
     border-radius: 10px;
 }
 
-#login-container a {
+#account-container a {
     text-decoration: none;
     color: var(--blue);
 }
 
-#login-container a:hover {
+#account-container a:hover {
     color: var(--blue-dark);
 }
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#login-form label {
+    font-weight: bold;
+    /*
+    margin: 0 0 10px 40px;
+    */
+    margin-bottom: 10px;
+}
+
 
 .form-control {
     width: 300px;
 }
 
 /* Built in IDs for forms */
-#id_username {
+#id_username, #id_password {
     width: 300px;
+    /*
+    margin: 0 0 20px 40px;
+    */
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    margin-top: 10px;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: var(--blue-dark);
 }
