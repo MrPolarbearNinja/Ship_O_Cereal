@@ -1,4 +1,4 @@
-from  django.forms import ModelForm, widgets
+from django.forms import ModelForm, widgets
 from account.models import User
 
 class Profile_Form(ModelForm):
@@ -6,5 +6,5 @@ class Profile_Form(ModelForm):
         model = User
         exclude = ['id', 'user']
         widgets = {
-            'image' : widgets.TextInput(attrs={'class': 'form-control'})
+            'image': widgets.TextInput(attrs={'class': 'form-control'})
         }

@@ -1,13 +1,35 @@
 {% extends 'base.html' %}
 {% block content %}
-        <div id="center-box">
-            <div id="account_box">
-                <form method="post">
-                    {% csrf_token %}
-                    {{ form }}
+
+    <div id="myacc-container">
+        <form method="post" id="myacc-form">
+            {% csrf_token %}
+
+            <div id="myacc-name-button">
+                <div id="myacc-name">
+                    <h1>Edit profile</h1>
+                    <label for="id_first_name">First name</label>
+                    {{ form.first_name }}
+                    <label for="id_last_name">Last name</label>
+                    {{ form.last_name }}
+                </div>
+                <div id="myacc-button">
                     <input type="submit">
-                </form>
+                </div>
             </div>
-            <div><img src="{{ user.user.image }}" width="400px" height="400px"></div>
-        </div>
+
+            <div id="myacc-img-container">
+                <img src="{{ user.user.image }}"
+                     alt="Image of user {{ user.name }}"
+                     id="myacc-img"
+                     width="250px">
+
+
+                <label for="id_image">Image URL</label>
+                {{ form.image }}
+            </div>
+
+        </form>
+    </div>
+
 {% endblock %}

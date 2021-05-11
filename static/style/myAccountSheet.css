@@ -1,0 +1,49 @@
+#myacc-container {
+    margin-top: 75px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--grey);
+    width: 60%;
+}
+
+#myacc-form {
+    display: flex;
+    flex-grow: 1;
+}
+
+
+
+#myacc-form label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#myacc-name {
+    flex-direction: column;
+}
+
+#myacc-name-button {
+    flex-direction: column;
+    flex: 1;
+}
+
+#myacc-name input {
+    margin-bottom: 20px;
+}
+
+
+#myacc-img-container {
+    flex-direction: column;
+    flex: 1;
+}
+
+#myacc-img {
+    max-height: 350px;
+    max-width: 350px;
+    min-height: 200px;
+    min-width: 200px;
+    align-self: center;
+    border: 10px solid var(--purple);
+    border-radius: 10px;
+    margin: 10px;
+}
