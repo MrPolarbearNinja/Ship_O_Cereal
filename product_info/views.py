@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from product_info.models import Items
-from django.forms import ModelForm, widgets
+from django.shortcuts import redirect
 from history.models import History
 from basket.models import Basket
 import time
@@ -26,10 +26,11 @@ def get_item_by_id(request, id):
         'History': History.objects.all().filter(user=request.user.id).order_by('-time')[0:3]
     })
 
-def add_to_basket(request,id,quantit):
-    Bask = Basket(quantity=quantit, user_id=request.user.id, item_id=id)
+def add_to_basket(request,id,qty):
+    print(request)
+    Bask = Basket(quantity=qty, user_id=request.user.id, item_id=id)
     Bask.save()
-
+    return redirect('/product-info/'+str(id))
 
 
 

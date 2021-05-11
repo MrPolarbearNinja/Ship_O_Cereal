@@ -17,7 +17,7 @@ function dec_qty () {
     }
 }
 
-function add_to_basket() {
+function add_to_basket(item_id) {
     /* Get number from add-to-basket button */
     var qty = document.getElementById("itemdet-qty-curr");
     var number = qty.innerHTML;
@@ -33,4 +33,7 @@ function add_to_basket() {
     var new_qty = Number(number) + Number(bask_qty.innerHTML);
     bask_qty.innerHTML = new_qty
     qty.innerHTML = 0;
+
+    window.location.href = 'basket/' + item_id + '/' + number
+
 }
