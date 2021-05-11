@@ -2,24 +2,24 @@
 {% block content %}
 
     <!-- History div-->
-    {% include 'history_bar.html' %}
+    {% include 'history/history_bar.html' %}
 
     <!-- Catalogue div -->
     <div id="cat-container">
         <div id="cat-search-container">
             <h2>Search</h2>
-            <form>
+            <form action=None onsubmit="myFunction()">
                 <input type="search" id="search-box" placeholder="Enter item name here...">
-                <input type="radio" name="type-radio" value="Sugary">
+                <input type="radio" name="type-radio"  value="1" onclick="search_items()">
                 <label for="type">Sugary</label><br>
-                <input type="radio" name="type-radio" value="Vegan">
+                <input type="radio" name="type-radio" value="2" onclick="search_items()">
                 <label for="type">Vegan</label><br>
-                <input type="radio" name="type-radio" value="Healthy">
+                <input type="radio" name="type-radio" value="3" onclick="search_items()">
                 <label for="type">Healthy</label>
-                <input type="radio" name="type-radio" value="Low-Carb">
+                <input type="radio" name="type-radio" value="4" onclick="search_items()">
                 <label for="type">Low-Carb</label>
+                <input type="submit" value="Search">
             </form>
-            <button onclick="search_items()">Search</button>
         </div>
 
         <div id="cat-list">

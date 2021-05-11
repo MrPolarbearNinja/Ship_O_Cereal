@@ -11,12 +11,18 @@ def index(request):
 
 def get_item_by_id(request, id):
     if request.user.is_authenticated:
-        hist = History(time=time.time(), user_id=request.user.id, item_id=id)
-        hist.save()
+        if not History.objects.filter(user_id=request.user.id, item_id=id):
+            hist = History(time=time.time(), user_id=request.user.id, item_id=id)
+            hist.save()
+        else:
+            hist_update = History.objects.get(user_id=request.user.id, item_id=id)
+            hist_update.time = time.time()
+            hist_update.save()
 
 
     return render(request, 'product_info/item_detail.html', {
-        'item' : get_object_or_404(Items, pk=id)
+        'item': get_object_or_404(Items, pk=id),
+        'History': History.objects.all().filter(user=request.user.id).order_by('-time')[0:3]
     })
 
 
