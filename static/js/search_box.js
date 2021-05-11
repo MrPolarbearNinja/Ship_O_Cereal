@@ -1,4 +1,6 @@
 
+
+
 function search_items(){
     var query = document.getElementById("search-box").value
     var type = ''
@@ -10,7 +12,7 @@ function search_items(){
           break;
       }
     }
-
+    console.log("Hello")
     var my_url = ''
     if (query != '') {
         my_url += "/?search_filter=" + query
