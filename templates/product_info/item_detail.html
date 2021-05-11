@@ -20,7 +20,7 @@
                     <h1>{{  item.name  }}</h1>
                     <p><strong>Price: {{  item.price  }} kr</strong></p>
                     <p>PID: {{  item.id  }}</p> <!-- Product ID -->
-                    <p>Stock left: [int]</p>
+                    <p>Stock left: {{ item.item_stock_set.first.quantity|floatformat }}</p>
                 </div>
 
             </div>

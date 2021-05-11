@@ -1,7 +1,7 @@
 
 
 
-function search_items(){
+function search_items(event){
     var query = document.getElementById("search-box").value
     var type = ''
     var radios = document.getElementsByName('type-radio');
@@ -22,4 +22,7 @@ function search_items(){
     else if (query == '' && type != '')
         my_url += "/?search_type=" + type
     window.location.href = my_url
+
+    event.preventDefault()
+
   }
