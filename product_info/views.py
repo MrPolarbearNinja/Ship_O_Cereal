@@ -27,8 +27,15 @@ def get_item_by_id(request, id):
     })
 
 def add_to_basket(request,id,qty):
-    Bask = Basket(quantity=qty, user_id=request.user.id, item_id=id)
-    Bask.save()
+
+    if not Basket.objects.filter(user_id=request.user.id, item_id=id):
+        Bask = Basket(quantity=qty, user_id=request.user.id, item_id=id)
+        Bask.save()
+    else:
+        Bask_update = Basket.objects.get(user_id=request.user.id, item_id=id)
+        Bask_update.quantity = Bask_update.quantity + qty
+        Bask_update.save()
+
     return redirect('/product-info/'+str(id))
 
 
