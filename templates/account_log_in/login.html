@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div id="account-container">
+    <div class="account-container" id="login-container">
 
         <h1>Log in to your account</h1>
         <form method="post" id="login-form">
             {% csrf_token %}
             {{ form }}
-            <input type="submit" class="btn btn-primary" value="Login" />
+            <input type="submit" class="btn btn-primary" value="Log in" />
         </form>
         <h3>Don't have an account? <a href="{% url 'register' %}">Sign up now!</a></h3>
 
