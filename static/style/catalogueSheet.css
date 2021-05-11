@@ -1,6 +1,7 @@
 #cat-container {
     width: 60%;
     flex-direction: column;
+    margin: 0 60px;
 }
 
 #cat-search-container {
@@ -50,6 +51,7 @@
     -webkit-transform: scale(1.05);
     -o-transform: scale(1.05);
     -ms-transform: scale(1.05);
+    filter: drop-shadow(0 0 3px gray);
 }
 
 .cat-item-img {

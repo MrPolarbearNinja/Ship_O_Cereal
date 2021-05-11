@@ -40,14 +40,14 @@
         <div id="itemdet-lower">
             <div id="itemdet-buttons">
                 <div id="itemdet-add-to-bask-div">
-                    <button id="itemdet-b-add-to-bask">Add to basket</button>
+                    <button id="itemdet-b-add-to-bask" onclick="add_to_basket()">Add to basket</button>
                 </div>
                 <div id="itemdet-quantity-val-div">
-                    <h2>0</h2>
+                    <h2 id="itemdet-qty-curr">0</h2>
                 </div>
                 <div id="itemdet-quantity-buttons-div">
-                    <button id="itemdet-b-inc">+</button>
-                    <button id="itemdet-b-dec">-</button>
+                    <button id="itemdet-b-inc" onclick="inc_qty()">+</button>
+                    <button id="itemdet-b-dec" onclick="dec_qty()">-</button>
                 </div>
             </div>
         </div>

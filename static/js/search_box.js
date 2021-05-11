@@ -12,12 +12,12 @@ function search_items(){
     }
 
     var my_url = ''
-
-    if (query != '')
-        my_url += "/?search_type=" + query
+    if (query != '') {
+        my_url += "/?search_filter=" + query
         if (type != '')
-            my_url += "&?search_type=" + query
+            my_url += "&search_type=" + type
+    }
     else if (query == '' && type != '')
-        my_url += "/?search_type=" + query
-    window.location.href = "/?search_filter=" + query
+        my_url += "/?search_type=" + type
+    window.location.href = my_url
   }
