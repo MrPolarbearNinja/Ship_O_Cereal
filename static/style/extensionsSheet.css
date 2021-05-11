@@ -1,14 +1,17 @@
 /* CSS File containing the search history and basket extensions */
 
 /* History tab */
+
 #hist-container {
     flex-direction: column;
-    position: fixed;
     width: 200px;
     min-height: 175px;
+    margin-top: 75px;
 
-    top: 130px;
-    left: 40px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
 }
 
 #hist-header {
@@ -27,7 +30,7 @@
     flex-direction: column;
     background-color: var(--grey);
     border-radius: 0 0 10px 10px;
-    min-height: 100px;
+    min-height: 75px;
     width: 200px;
 }
 
@@ -38,22 +41,65 @@
     color: var(--grey-dark);
 }
 
-/* History item */
-#hist-item-container {
 
+/* History item */
+.hist-item {
+    margin: auto;
+    justify-content: center;
 }
+
+.hist-item-container {
+    height: 150px;
+    align-items: center;
+}
+
+.hist-item-container {
+    -webkit-transition: transform 0.3s ease-in-out;
+    -moz-transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hist-item-container:hover {
+    transform: scale(1.5);
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+}
+
+.hist-item-img {
+    border-radius: 5px;
+}
+
+.hist-item-img:hover {
+    filter: drop-shadow(0 0 5px gray);
+}
+
+
+
+
+
 
 /* Basket */
 
+#bask-link {
+    text-decoration: none;
+    display: inline;
+    height: 100px;
+    align-self: flex-end;
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    bottom: 30px;
+}
+
 #bask-container {
-    position: fixed;
     background-color: var(--purple);
     width: 200px;
     height: 100px;
     border-radius: 10px;
-
-    bottom: 30px;
-    right: 30px;
+    transition: background-color 0.2s;
 }
 
 #bask-container:hover {
