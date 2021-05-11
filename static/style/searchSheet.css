@@ -1,0 +1,10 @@
+#cat-search-container h2 {
+    margin-top: 5px;
+    float: top;
+}
+
+#search-div {
+    margin-top: 50px;
+    float: left;
+    background-color: #263238;
+}

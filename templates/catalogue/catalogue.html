@@ -7,19 +7,21 @@
     <!-- Catalogue div -->
     <div id="cat-container">
         <div id="cat-search-container">
-            <h2>Search</h2>
-            <form onsubmit="myFunction()">
-                <input type="search" id="search-box" placeholder="Enter item name here...">
-                <input type="radio" name="type-radio"  value="1" onclick="search_items()">
-                <label for="type">Sugary</label><br>
-                <input type="radio" name="type-radio" value="2" onclick="search_items()">
-                <label for="type">Vegan</label><br>
-                <input type="radio" name="type-radio" value="3" onclick="search_items()">
-                <label for="type">Healthy</label>
-                <input type="radio" name="type-radio" value="4" onclick="search_items()">
-                <label for="type">Low-Carb</label>
-                <input type="submit" value="Search">
-            </form>
+            <div id="search-div">
+                <h2>Search</h2>
+                <form id="search-form"  onsubmit="search_items(event)">
+                    <input type="search" id="search-box" placeholder="Enter item name here...">
+                    <input type="radio" name="type-radio"  value="1" onclick="search_items(event)">
+                    <label for="type">Sugary</label><br>
+                    <input type="radio" name="type-radio" value="2" onclick="search_items(event)">
+                    <label for="type">Vegan</label><br>
+                    <input type="radio" name="type-radio" value="3" onclick="search_items(event)">
+                    <label for="type">Healthy</label>
+                    <input type="radio" name="type-radio" value="4" onclick="search_items(event)">
+                    <label for="type">Low-Carb</label>
+                    <input type="submit" value="Search">
+                </form>
+            </div>
         </div>
 
         <div id="cat-list">
