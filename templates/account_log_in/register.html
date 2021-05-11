@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div id="account-container">
-        <form method="post">
+    <div class="account-container" id="signup-container">
+
+        <h2>Welcome to Ship O'Cereal! Register here below</h2>
+        <form method="post" id="signup-form">
             {% csrf_token %}
             {{ form }}
-            <input type="submit" class="btn btn-primary" value="Sign Up" />
+            <input type="submit" class="btn btn-primary" value="Sign up" />
         </form>
     </div>
 
