@@ -35,9 +35,4 @@ def register(request):
 
 
 
-def make_checkout_form(request):
-    pass
-
-
-
 

@@ -1,5 +1,6 @@
 from django.db import models
 from product_info.models import Items
+from account.models import User
 
 # Create your models here.
 
@@ -25,5 +26,6 @@ class Purchase_History(models.Model):
     country = models.ForeignKey(Country, on_delete=models.CASCADE)
 
 class Checkout(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     items = models.ForeignKey(Items, on_delete=models.CASCADE)
     purchase = models.ForeignKey(Purchase_History, on_delete=models.CASCADE)
