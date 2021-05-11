@@ -4,5 +4,6 @@ from . import views
 urlpatterns = [
     ## http://localhost:8000/catalogue
     path('', views.index, name="index"),
-    path('<int:id>', views.get_item_by_id, name="Product_info")
+    path('<int:id>', views.get_item_by_id, name="Product_info"),
+    path('<int:id>', views.add_to_basket, name="Add_basket")
 ]
