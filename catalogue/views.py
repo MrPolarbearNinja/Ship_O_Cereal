@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from product_info.models import Items
 from history.models import History
+from basket.models import Basket
 from django.http import JsonResponse
 
 
@@ -27,5 +28,6 @@ def index(request):
 
     else:
         context = {'Items' : Items.objects.all().order_by('id')}
-    context['History'] = History.objects.all().filter(user=request.user.id).order_by('-time')[0:3]
+    context['history'] = History.objects.all().filter(user=request.user.id).order_by('-time')[0:3]
+    context['basket'] = Basket.objects.all().filter(user=request.user.id)
     return render(request, 'catalogue/catalogue.html', context)

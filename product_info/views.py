@@ -23,13 +23,19 @@ def get_item_by_id(request, id):
 
     return render(request, 'product_info/item_detail.html', {
         'item': get_object_or_404(Items, pk=id),
-        'History': History.objects.all().filter(user=request.user.id).order_by('-time')[0:3]
+        'history': History.objects.all().filter(user=request.user.id).order_by('-time')[0:3]
     })
 
 def add_to_basket(request,id,qty):
-    print(request)
-    Bask = Basket(quantity=qty, user_id=request.user.id, item_id=id)
-    Bask.save()
+
+    if not Basket.objects.filter(user_id=request.user.id, item_id=id):
+        Bask = Basket(quantity=qty, user_id=request.user.id, item_id=id)
+        Bask.save()
+    else:
+        Bask_update = Basket.objects.get(user_id=request.user.id, item_id=id)
+        Bask_update.quantity = Bask_update.quantity + qty
+        Bask_update.save()
+
     return redirect('/product-info/'+str(id))
 
 

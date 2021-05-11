@@ -1,20 +1,40 @@
 #search-div {
     width: 100%;
-    background-color: #263238;
+    background-color: #CFD8DC;
     display: flex;
     flex-direction: column;
 }
 
+#search-form {
+    width: 100%;
+    background-color: #CFD8DC;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 1em;
+    margin-top: 1em;
+    vertical-align: middle;
+}
+
 input[type=search] {
-  width: 50%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 input[type=radio] {
     float: left;
+    width: auto;
+    margin-left: 3em;
+
+}
+
+input[type=submit] {
+    float: left;
+    width: auto;
+    margin-left: 3em;
 }
