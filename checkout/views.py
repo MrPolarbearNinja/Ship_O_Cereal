@@ -6,25 +6,24 @@ from checkout.models import Checkout
 # Create your views here.
 def index(request):
     if request.method == 'POST':
-        return redirect('review')
+        form_review = Purchase_Histoyry_Form(data=request.POST)
+        print("Hello")
+        return redirect('review', form_review=form_review)
     return render(request, 'checkout/checkout.html', {
         'form': Purchase_Histoyry_Form()
     })
 
 def make_checkout(request, purches_id):
     basket = Basket.objects.filter(user_id=request.user.id)
-    basket = Basket.objects.filter(user_id=request.user.id)
     for row in basket:
         check = Checkout(purchase_id=purches_id, items_id=row.item_id, user_id=request.user.id)
         check.save()
 
-def make_purchase(request):
+def make_purchase(request, form_review):
     if request.method == 'POST':
-        form = Purchase_Histoyry_Form(data=request.POST)
+        form = form_review
         if form.is_valid():
             task = form.save()
             make_checkout(request, task.id)
             return redirect('index')
-    return render(request, 'checkout/review.html', {
-        'form': Purchase_Histoyry_Form()
-    })
+    return render(request, 'checkout/review.html')

@@ -8,6 +8,10 @@
     </div>
     <div id="review-container">
         <h1>Are you Sure about buying this unhealthy crap?</h1>
+        <form method="post">
+            {% csrf_token %}
+            <input type="submit">
+        </form>
     </div>
     <form>
 
