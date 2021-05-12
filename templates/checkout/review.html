@@ -1,13 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-    <!-- Main div // Item detail box -->
     <div id="basket-container">
         {% for item in basket %}
             {% include 'basket/basket_item.html' with bitem=item%}
         {% endfor %}
     </div>
     <div id="review-container">
-        <h1>Are you Sure about buying this unhealthy crap?</h1>
+        <h1>Review</h1>
         <p>{{ purches_info.firstName }}</p>
         <p>{{ purches_info.lastName }}</p>
         <p>{{ purches_info.streetName }}</p>
