@@ -11,22 +11,25 @@ def index(request):
         if request.method == 'POST':
             form = Purchase_Histoyry_Form(data=request.POST)
             if form.is_valid():
-                task = form.save()
-                make_checkout(request, task.id)
+                task = form.save(commit=False)
+                task.user_id = request.user.id
+                task.save()
         return redirect('review')
     return render(request, 'checkout/checkout.html', {
         'form': Purchase_Histoyry_Form()
     })
 
 def make_purchase(request):
+    last_purches = Purchase_History.objects.filter(user_id=request.user.id).order_by('-id').first()
     if request.method == 'POST':
-        last_purches = Purchase_History.objects.filter(user_id=request.user.id).order_by('-id').first()
         last_purches.confirmed = True
         last_purches.save()
         make_checkout(request, last_purches.id)
         empty_basket(request)
         return redirect('/')
-    return render(request, 'checkout/review.html')
+    return render(request, 'checkout/review.html', {
+        'purches_info': last_purches
+    })
 
 def make_checkout(request, purches_id):
     basket = Basket.objects.filter(user_id=request.user.id)
