@@ -12,7 +12,12 @@
             <h4>{{ bitem.item.name }}</h4>
             <h4>Quantity: {{ bitem.quantity|floatformat }}</h4>
         </div>
-    <button>Delete</button>
+        </a>
+    <form method="post" id="Delete_from_basket">
+            {% csrf_token %}
+            <input type="submit" class="btn btn-primary" value="DELETE" />
+        </form>
+
     </div>
-</a>
+
 
