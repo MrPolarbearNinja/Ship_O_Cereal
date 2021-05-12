@@ -1,16 +1,18 @@
-<a href="/product-info/{{ item.id }}" class="cat-item">
+<a href="/product-info/{{ item.item.id }}" class="cat-item">
     <div class="bas-item-container">
         <div class="bas-item-img-container">
             <img src="{{ bitem.item.items_image_set.first.image_link}}"
                  alt="Image of {{ bitem.item.name }}"
                  class="bas-item-img"
                  width="100px"
-                 height="145px">
+                 height="150x">
         </div>
 
-        <div class="cat-item-desc">
+        <div class="cat-item-basket">
             <h4>{{ bitem.item.name }}</h4>
-            <h4>{{ bitem.quantity|floatformat }}</h4>
+            <h4>Quantity: {{ bitem.quantity|floatformat }}</h4>
         </div>
+    <button>Delete</button>
     </div>
 </a>
+
