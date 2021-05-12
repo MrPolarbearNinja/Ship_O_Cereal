@@ -13,7 +13,8 @@
     </a>
     <div>
         {% if user.is_authenticated %}
-            <p>{{ user.username }}</p>
+                <img src="{{ user.user.image }}"/>
+                <a href="{% url 'profile' %}"><h2 style="text-transform: capitalize;">{{ user.username }}</h2></a>
         {% endif %}
     </div>
 
