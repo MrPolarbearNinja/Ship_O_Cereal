@@ -5,12 +5,14 @@
                  alt="Image of {{ bitem.item.name }}"
                  class="bas-item-img"
                  width="100px"
-                 height="145px">
+                 height="150x">
         </div>
 
-        <div class="cat-item-desc">
+        <div class="cat-item-basket">
             <h4>{{ bitem.item.name }}</h4>
-            <h4>{{ bitem.quantity|floatformat }}</h4>
+            <h4>Quantity: {{ bitem.quantity|floatformat }}</h4>
         </div>
+
     </div>
 </a>
+
