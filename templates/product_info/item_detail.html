@@ -20,7 +20,7 @@
                     <h1>{{  item.name  }}</h1>
                     <p><strong>Price: {{  item.price  }} kr</strong></p>
                     <p>PID: {{  item.id  }}</p> <!-- Product ID -->
-                    <p>Stock left: {{ item.item_stock_set.first.quantity|floatformat }}</p>
+                    <p>Stock left: <span id="itemdet-stock-quant">{{ item.item_stock_set.first.quantity|floatformat }}</span></p>
                 </div>
 
             </div>
@@ -43,7 +43,7 @@
                     <button id="itemdet-b-add-to-bask" onclick="add_to_basket({{ item.id }})">Add to basket</button>
                 </div>
                 <div id="itemdet-quantity-val-div">
-                    <h2 id="itemdet-qty-curr">0</h2>
+                    <h2 id="itemdet-qty-curr">1</h2>
                 </div>
                 <div id="itemdet-quantity-buttons-div">
                     <button id="itemdet-b-inc" onclick="inc_qty()">+</button>

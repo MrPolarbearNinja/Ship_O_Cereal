@@ -29,6 +29,18 @@ div {
 #main-container {
     flex-grow: 1;
     justify-content: center;
+
+}
+
+#footer-container {
+    background-color: #1976D2;
+    color: #FFFFFF;
+    padding-left: 50px;
+    flex-direction: column;
+}
+#footer-div p {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 
