@@ -8,42 +8,71 @@
 
 #myacc-form {
     display: flex;
+    flex-direction: column;
     flex-grow: 1;
 }
 
 
 
-#myacc-form label {
+
+
+#myacc-profile {
+    flex-direction: column;
+    flex: 1;
+}
+
+#myacc-form-container {
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+#myacc-form-container label {
     font-weight: bold;
-    margin-bottom: 10px;
 }
 
-#myacc-name {
-    flex-direction: column;
-}
-
-#myacc-name-button {
-    flex-direction: column;
+#myacc-image-container {
     flex: 1;
-}
-
-#myacc-name input {
-    margin-bottom: 20px;
-}
-
-
-#myacc-img-container {
-    flex-direction: column;
-    flex: 1;
+    justify-content: center;
 }
 
 #myacc-img {
-    max-height: 350px;
-    max-width: 350px;
-    min-height: 200px;
-    min-width: 200px;
-    align-self: center;
+    max-width: 450px;
+    min-width: 150px;
     border: 10px solid var(--purple);
+    border-radius: 5px;
+}
+
+
+#myacc-button {
+    margin-top: 30px;
+    align-items: center;
+}
+
+#myacc-button input {
+    padding: 0 40px;
+    height: 50px;
     border-radius: 10px;
-    margin: 10px;
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#myacc-button input:hover {
+    background-color: var(--green);
+}
+
+#myacc-success {
+    margin: 0;
+    padding-left: 25px;
+    color: var(--green);
+    display: none;
+    /*
+    display: inline-flex;
+    */
+/*    display: none;*/
 }

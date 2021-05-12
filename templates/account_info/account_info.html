@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <div id="myacc-container">
+{% comment %}    <div id="myacc-container">
         <form method="post" id="myacc-form">
             {% csrf_token %}
 
@@ -12,9 +12,11 @@
                     {{ form.first_name }}
                     <label for="id_last_name">Last name</label>
                     {{ form.last_name }}
+                    <label for="id_image">Image URL</label>
+                    {{ form.image }}
                 </div>
                 <div id="myacc-button">
-                    <input type="submit">
+                    <input type="submit" value="Save Changes">
                 </div>
             </div>
 
@@ -23,13 +25,54 @@
                      alt="Image of user {{ user.name }}"
                      id="myacc-img"
                      width="250px">
-
-
-                <label for="id_image">Image URL</label>
-                {{ form.image }}
             </div>
 
         </form>
     </div>
+    {% endcomment %}
+
+
+
+
+    <div id="myacc-container">
+        <form method="post" id="myacc-form">
+            {% csrf_token %}
+
+            <div id="myacc-info">
+                <div id="myacc-profile">
+                    <h1>Edit profile</h1>
+                    <div id="myacc-form-container">
+                        <label for="id_first_name">First name</label>
+                        {{ form.first_name }}
+                        <label for="id_last_name">Last name</label>
+                        {{ form.last_name }}
+                        <label for="id_image">Image URL</label>
+                        {{ form.image }}
+                    </div>
+                </div>
+
+                <div id="myacc-image-container">
+                    <img src="{{ user.user.image }}"
+                         alt="Image of user: {{ user.user.name }}"
+                         id="myacc-img"
+                         height="250px">
+                </div>
+            </div>
+
+            <div id="myacc-button">
+                <input type="submit" value="Save Changes" onclick="save_changes_acc()">
+                <h3 id="myacc-success">Saved!</h3>
+            </div>
+
+        </form>
+    </div>
+
+
+
+
+
+
+
+
 
 {% endblock %}

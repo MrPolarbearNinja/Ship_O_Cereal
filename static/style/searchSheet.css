@@ -16,7 +16,7 @@
     vertical-align: middle;
 }
 
-input[type=search] {
+#search-div input[type=search] {
     width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -26,14 +26,14 @@ input[type=search] {
     box-sizing: border-box;
 }
 
-input[type=radio] {
+#search-div input[type=radio] {
     float: left;
     width: auto;
     margin-left: 3em;
 
 }
 
-input[type=submit] {
+#search-div input[type=submit] {
     float: left;
     width: auto;
     margin-left: 3em;
