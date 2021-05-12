@@ -86,6 +86,7 @@
     text-decoration: none;
     display: inline;
     height: 100px;
+    margin-bottom: 30px;
     align-self: flex-end;
 
     position: -webkit-sticky;
