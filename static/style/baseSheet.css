@@ -33,10 +33,14 @@ div {
 }
 
 #footer-container {
-    background-color: #1976D2;
+    background-color: #42A5F5;
     color: #FFFFFF;
     padding-left: 50px;
     flex-direction: column;
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
 }
 #footer-div p {
     margin-top: 10px;
