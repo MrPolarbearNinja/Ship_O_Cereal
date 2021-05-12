@@ -28,7 +28,8 @@ def make_purchase(request):
         empty_basket(request)
         return redirect('/')
     return render(request, 'checkout/review.html', {
-        'purches_info': last_purches
+        'purches_info': last_purches,
+        'basket': Basket.objects.all().filter(user=request.user.id)
     })
 
 def make_checkout(request, purches_id):
