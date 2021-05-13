@@ -56,6 +56,8 @@
 
 #nav-account p {
     margin: 0;
+    padding-top: 5px;
+    max-width: 20ch;
 }
 
 #nav-account img {
