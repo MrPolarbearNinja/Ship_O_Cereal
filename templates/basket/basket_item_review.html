@@ -1,5 +1,4 @@
  <div class="bas-item-container">
-     <a href="/product-info/{{ item.item.id }}" class="cat-item">
         <div class="bas-item-img-container">
             <img src="{{ bitem.item.items_image_set.first.image_link}}"
                  alt="Image of {{ bitem.item.name }}"
@@ -7,16 +6,11 @@
                  width="100px"
                  height="150x">
         </div>
-     </a>
 
         <div class="cat-item-basket">
             <h4>{{ bitem.item.name }}</h4>
             <h4>Quantity: {{ bitem.quantity|floatformat }}</h4>
         </div>
-        <form method="post" id="Delete_from_basket">
-            {% csrf_token %}
-            <input type="submit" onclick="delete_from_basket(event, {{ bitem.id }})" class="btn btn-primary" value="DELETE" />
-        </form>
     </div>
 
 

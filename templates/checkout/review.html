@@ -2,7 +2,7 @@
 {% block content %}
     <div id="basket-container">
         {% for item in basket %}
-            {% include 'basket/basket_item.html' with bitem=item%}
+            {% include 'basket/basket_item_review.html' with bitem=item%}
         {% endfor %}
     </div>
     <div id="review-container">
@@ -19,7 +19,4 @@
             <input type="submit">
         </form>
     </div>
-    <form>
-
-    </form>
 {% endblock %}
