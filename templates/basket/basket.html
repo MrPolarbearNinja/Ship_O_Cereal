@@ -7,6 +7,6 @@
                 {% include 'basket/basket_item.html' with bitem=item%}
             {% endfor %}
         </div>
-        <button id="buy-button">buy</button>
+        <button id="buy-button" onclick="window.location.href='/checkout'">buy</button>
 
 {% endblock %}
