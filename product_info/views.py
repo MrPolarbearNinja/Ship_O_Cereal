@@ -3,6 +3,7 @@ from product_info.models import Items
 from django.shortcuts import redirect
 from history.models import History
 from basket.models import Basket
+from product_info.models import Item_Stock
 import time
 
 # Create your views here.
@@ -36,6 +37,10 @@ def add_to_basket(request,id,qty):
         Bask_update = Basket.objects.get(user_id=request.user.id, item_id=id)
         Bask_update.quantity = Bask_update.quantity + qty
         Bask_update.save()
+
+    item = Item_Stock.objects.get(item_id=id)
+    item.quantity -= qty
+    item.save()
 
     return redirect('/product-info/'+str(id))
 
