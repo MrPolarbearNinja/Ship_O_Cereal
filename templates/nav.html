@@ -1,7 +1,7 @@
 {% load static %}
 
 <div id="nav">
-    <!-- AA | Logo container -->
+
     <a href="/" id="nav-logo">
         <div>
             <img src="{% static 'images/logo.svg' %}"
@@ -12,11 +12,11 @@
         </div>
     </a>
 
-    <!-- AB | List of links -->
     <div id="nav-list-container">
         <ul id="nav-list">
             {% if user.is_authenticated %}
                 <li><a href="{% url 'profile' %}">My account</a></li>
+                <li><a href="#">My orders</a></li>
                 <li><a href="{% url 'logout' %}"><strong>Log out</strong></a></li>
             {% else %}
                 {% if request.path != '/account/login'%}
@@ -33,23 +33,10 @@
                     <img src="{{ user.user.image }}"
                          alt="Image of user: {{ user.username }}"
                          height="60px">
-                    <p>{{ user.username }}</p> {% comment %}Fix: show only x amount of characters{% endcomment %}
+                    <p>{{ user.username }}</p>
                 </div>
             </a>
         {% endif %}
-
-
-
-{% comment %}        {% if user.is_authenticated %}
-
-            <div id="nav-account">
-
-            </div>
-            <img src="{{ user.user.image }}"/>
-
-            <a href="{% url 'profile' %}"><h2 style="text-transform: capitalize;">{{ user.username }}</h2></a>
-        {% endif %}{% endcomment %}
-
     </div>
 
 </div>
