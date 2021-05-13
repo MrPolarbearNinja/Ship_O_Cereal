@@ -13,5 +13,4 @@ def index(request):
     return render(request, 'basket/basket.html', context)
 
 def delete_from_basket(request, id):
-
     return redirect('index')
