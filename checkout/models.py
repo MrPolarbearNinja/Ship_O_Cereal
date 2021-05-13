@@ -31,3 +31,4 @@ class Checkout(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     items = models.ForeignKey(Items, on_delete=models.CASCADE)
     purchase = models.ForeignKey(Purchase_History, on_delete=models.CASCADE)
+    quantity = models.FloatField()
