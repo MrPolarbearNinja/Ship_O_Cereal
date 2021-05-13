@@ -21,8 +21,21 @@
 
 }
 
-#account_box input[type=submit] {
-    float: left;
-    width: auto;
-    margin-top: 3em;
+#account_box input[type=submit]{
+    margin-top: 20px;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    align-self: center;
+}
+
+#account_box input[type=submit]:hover {
+    background-color: var(--blue-dark);
 }
