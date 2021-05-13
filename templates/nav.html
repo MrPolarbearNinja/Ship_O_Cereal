@@ -33,7 +33,7 @@
                     <img src="{{ user.user.image }}"
                          alt="Image of user: {{ user.username }}"
                          height="60px">
-                    <p>{{ user.username }}</p>
+                    <p>{{ user.username }}</p> {% comment %}Fix: show only x amount of characters{% endcomment %}
                 </div>
             </a>
         {% endif %}
