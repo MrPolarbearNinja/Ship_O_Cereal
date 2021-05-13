@@ -13,4 +13,10 @@ def index(request):
     return render(request, 'basket/basket.html', context)
 
 def delete_from_basket(request, id):
+    print(1)
+    if Basket.objects.filter(user_id=request.user.id, id=id):
+        instance = Basket.objects.get(id=id)
+        instance.delete()
+    else:
+        print(no)
     return redirect('index')
