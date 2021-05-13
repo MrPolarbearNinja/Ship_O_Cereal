@@ -6,7 +6,7 @@
     flex-direction: column;
     width: 200px;
     min-height: 175px;
-    margin-top: 75px;
+    margin: 75px 0 30px 0;
 
     position: -webkit-sticky;
     position: sticky;

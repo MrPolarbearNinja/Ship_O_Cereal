@@ -1,5 +1,5 @@
 #myacc-container {
-    margin-top: 75px;
+    margin: 75px 0 30px 0;
     padding: 30px;
     border-radius: 10px;
     background-color: var(--grey);
@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    justify-content: space-between;
 }
 
 
@@ -45,7 +46,8 @@
 
 
 #myacc-button {
-    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid var(--blue-dark);
     align-items: center;
 }
 

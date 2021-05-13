@@ -1,7 +1,7 @@
 .account-container {
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 75px;
+    margin: 75px 0 30px 0;
     width: 500px;
     min-height: 400px;
     padding: 0 50px;

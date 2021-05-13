@@ -11,7 +11,7 @@ function display_save_msg() {
         let resetAttr = () => {
             document.getElementById("myacc-success").style.display = "none";
         }
-        setTimeout(resetAttr, 4000);
+        setTimeout(resetAttr, 3000);
         document.getElementById("myacc-success").style.display = "inline-flex";
     }
     load = "false";
