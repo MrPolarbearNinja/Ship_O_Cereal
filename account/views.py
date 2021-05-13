@@ -28,10 +28,9 @@ def register(request):
     if request.method == 'POST':
         form = UserCreationForm(data=request.POST)
         if form.is_valid():
-            profile = form.save(commit=False)
+            profile = form.save()
             user = User(image=image_link, user_id=profile.id)
             user.save()
-            form.save()
             return redirect('/account/login')
     return render(request, 'account_log_in/register.html', {
         'form': UserCreationForm()
