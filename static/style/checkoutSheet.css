@@ -17,10 +17,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-left: 1em;
-    margin-right: 1em;
-    margin-top: 3em;
-    margin-bottom: 1em;
+    margin: 3em 1em 1em;
 
 }
 
