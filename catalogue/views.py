@@ -10,8 +10,13 @@ def index(request):
     if 'sort_by_price' in request.GET:
         if request.GET['sort_by_price'] == "1":
             sortby = 'price'
-        if request.GET['sort_by_price'] == "0":
+        elif request.GET['sort_by_price'] == "0":
             sortby = '-price'
+    elif 'sort_by_name' in request.GET:
+        if request.GET['sort_by_name'] == "1":
+            sortby = 'name'
+        elif request.GET['sort_by_name'] == "0":
+            sortby = '-name'
 
     if ('search_filter' in request.GET and 'search_type' in request.GET):
         context = {}
