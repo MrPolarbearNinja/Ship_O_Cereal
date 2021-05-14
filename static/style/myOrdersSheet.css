@@ -37,6 +37,10 @@
     background-color: var(--blue-light);
 }
 
+#order-links a:nth-child(2):hover {
+    background-color: var(--blue-dark);
+}
+
 #orders-empty {
     text-align: center;
     color: var(--grey-dark);
