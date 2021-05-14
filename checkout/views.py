@@ -16,6 +16,8 @@ def index(request):
                 task.save()
                 make_checkout(request, task.id)
                 empty_basket(request)
+            else:
+                return redirect('/checkout')
         return redirect('review', task.id)
     return render(request, 'checkout/checkout.html', {
         'form': Purchase_Histoyry_Form()
