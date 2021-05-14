@@ -37,7 +37,6 @@
 #hist-empty {
     margin: auto;
     text-align: center;
-    font-weight: bold;
     color: var(--grey-dark);
 }
 

@@ -3,6 +3,10 @@
         <h2>History</h2>
     </div>
     <div id="hist-list">
+        {% if history|length == 0 %}
+            <p id="hist-empty">No products viewed.</p>
+        {% endif %}
+
         {% for history in history %}
             {% include 'history/history_item.html' with history=history%}
         {% endfor %}
