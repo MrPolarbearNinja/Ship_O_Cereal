@@ -8,3 +8,4 @@ class Basket(models.Model):
     item = models.ForeignKey(Items, on_delete=models.CASCADE)
     quantity = models.FloatField()
 
+

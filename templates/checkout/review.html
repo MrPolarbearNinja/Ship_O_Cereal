@@ -13,7 +13,7 @@
         <p>{{ purches_info.streetNumber }}</p>
         <p>{{ purches_info.city }}</p>
         <p>{{ purches_info.country }}</p>
-        <p>{{ purches_info.zip }}</p>
+        <p>{{ purches_info.zip|floatformat }}</p>
         <form method="post">
             {% csrf_token %}
             {% if purches_info.confirmed == False %}

@@ -26,6 +26,11 @@ class Purchase_History(models.Model):
     city = models.ForeignKey(City, on_delete=models.CASCADE)
     country = models.ForeignKey(Country, on_delete=models.CASCADE)
     confirmed = models.BooleanField(default=False)
+    card_holder = models.CharField(max_length=255)
+    card_number = models.FloatField()
+    card_exp = models.DateTimeField(auto_now_add=True)
+    card_cvc = models.FloatField()
+
 
 class Checkout(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
