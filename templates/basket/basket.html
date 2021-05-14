@@ -3,10 +3,16 @@
     <!-- Main div // Item detail box -->
 
         <div id="basket-container">
-            {% for item in basket %}
-                {% include 'basket/basket_item.html' with bitem=item%}
+            {% if basket|length == 0 %}
+                <h1>No products in basket</h1>
+                <p>See <a href="../catalogue">Products</a> in catalogue</p>
+            {% else %}
+                {% for item in basket %}
+                    {% include 'basket/basket_item.html' with bitem=item%}
             {% endfor %}
         <button id="buy-button" onclick="window.location.href='/checkout'">Buy</button>
+            {% endif %}
+
         </div>
 
 {% endblock %}
