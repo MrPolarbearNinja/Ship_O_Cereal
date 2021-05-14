@@ -30,7 +30,7 @@ def make_purchase(request, id):
     if request.method == 'POST':
         purches.confirmed = True
         purches.save()
-        return redirect('/')
+        return redirect('/orders/?success=True')
     return render(request, 'checkout/review.html', {
         'purches_info': purches,
         'checkout': Checkout.objects.all().filter(user=request.user.id, purchase_id=id)

@@ -3,5 +3,12 @@ from checkout.models import Purchase_History
 
 
 def orders(request):
-    context = {'orders': Purchase_History.objects.filter(user_id=request.user.id).order_by('-id')}
-    return render(request, 'orders/orders.html', context)
+    success = False
+    #Only to display the success massage
+    if 'success' in request.GET:
+        success = True
+
+    return render(request, 'orders/orders.html', {
+        'orders': Purchase_History.objects.filter(user_id=request.user.id).order_by('-id'),
+        'success': success
+    })

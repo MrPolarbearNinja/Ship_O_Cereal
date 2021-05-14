@@ -45,3 +45,7 @@
     text-align: center;
     color: var(--grey-dark);
 }
+
+#order-green {
+    color: #8BC34A;
+}
