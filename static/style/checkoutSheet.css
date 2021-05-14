@@ -1,3 +1,92 @@
+#checkout-container {
+    width: 40%;
+    margin: 75px 0 30px 0;
+    padding: 30px;
+    background-color: var(--grey);
+    border-radius: 10px;
+}
+
+#checkout-container label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#checkout-personal {
+    flex-direction: column;
+    border-bottom: 1px solid var(--grey-dark);
+    margin-bottom: 30px;
+}
+
+#checkout-form {
+    flex-grow: 1;
+}
+
+#checkout-form h1 {
+    margin-top: 0;
+}
+
+#checkout-confirm {
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.checkout-info {
+    justify-content: space-between;
+}
+
+#checkout-name label, #checkout-c-upper label {
+    width: 48%;
+}
+
+#checkout-s-name {
+    flex-grow: 1;
+    margin-right: 25px;
+}
+
+
+#checkout-location label {
+    width: 30%;
+}
+
+
+#checkout-card {
+    flex-direction: column;
+}
+
+#checkout-c-lower {
+    justify-content: space-evenly;
+}
+
+
+#checkout-confirm input {
+    padding: 0 40px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#checkout-confirm input:hover {
+    background-color: var(--green);
+}
+
+
+
+
+
+
+
+
+
+/*
+
 #center-box {
 
     margin-top: 75px;
@@ -38,4 +127,4 @@
 
 #account_box input[type=submit]:hover {
     background-color: var(--blue-dark);
-}
+}*/

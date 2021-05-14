@@ -25,9 +25,8 @@
     </div>
 
     <!-- Basket div -->
-
-
     {% if user.is_authenticated %}
-          {% include 'basket_button.html' with basket=basket%}
-        {% endif %}
+        {% include 'basket_button.html' with basket=basket%}
+    {% endif %}
+
 {% endblock %}

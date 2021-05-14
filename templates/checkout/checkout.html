@@ -1,12 +1,69 @@
 {% extends 'base.html' %}
 {% block content %}
-        <div id="center-box">
-            <div id="account_box">
-                <form method="post">
-                    {% csrf_token %}
-                    {{ form }}
-                    <input type="submit">
-                </form>
+
+    <div id="checkout-container">
+        <form method="post" id="checkout-form">
+            {% csrf_token %}
+
+            <h1>Checkout</h1>
+
+            <!-- Personal information -->
+            <div id="checkout-personal">
+                <div id="checkout-name" class="checkout-info">
+                    <label for="id_firstName">First name
+                        {{ form.firstName }}
+                    </label>
+                    <label for="id_lastName">Last name
+                        {{ form.lastName }}
+                    </label>
+                </div>
+
+                <div id="checkout-street" class="checkout-info">
+                    <label for="id_streetName" id="checkout-s-name">Street name
+                        {{ form.streetName }}
+                    </label>
+                    <label for="id_streetNumber" id="checkout-s-num">Street number
+                        {{ form.streetNumber }}
+                    </label>
+                </div>
+
+                <div id="checkout-location" class="checkout-info">
+                    <label for="id_zip">Zip
+                        {{ form.zip }}
+                    </label>
+                    <label for="id_city">City
+                        {{ form.city }}
+                    </label>
+                    <label for="id_country">Country
+                        {{ form.country }}
+                    </label>
+                </div>
             </div>
-        </div>
+
+            <!-- Card information -->
+            <div id="checkout-card">
+                <div id="checkout-c-upper" class="checkout-info">
+                    <label for="id_card_holder">Card holder
+                        {{ form.card_holder }}
+                    </label>
+                    <label for="id_card_number">Card number
+                        {{ form.card_number }}
+                    </label>
+                </div>
+                <div id="checkout-c-lower" class="checkout-info">
+                    <label for="id_card_exp">Expiry
+                        {{ form.card_exp }}
+                    </label>
+                    <label for="id_card_cvc">CVC
+                        {{ form.card_cvc }}
+                    </label>
+                </div>
+            </div>
+            <div id="checkout-confirm">
+                <input type="submit" value="Proceed to review">
+            </div>
+        </form>
+
+    </div>
+
 {% endblock %}

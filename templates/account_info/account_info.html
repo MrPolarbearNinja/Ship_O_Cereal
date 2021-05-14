@@ -1,39 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
 
-{% comment %}    <div id="myacc-container">
-        <form method="post" id="myacc-form">
-            {% csrf_token %}
-
-            <div id="myacc-name-button">
-                <div id="myacc-name">
-                    <h1>Edit profile</h1>
-                    <label for="id_first_name">First name</label>
-                    {{ form.first_name }}
-                    <label for="id_last_name">Last name</label>
-                    {{ form.last_name }}
-                    <label for="id_image">Image URL</label>
-                    {{ form.image }}
-                </div>
-                <div id="myacc-button">
-                    <input type="submit" value="Save Changes">
-                </div>
-            </div>
-
-            <div id="myacc-img-container">
-                <img src="{{ user.user.image }}"
-                     alt="Image of user {{ user.name }}"
-                     id="myacc-img"
-                     width="250px">
-            </div>
-
-        </form>
-    </div>
-    {% endcomment %}
-
-
-
-
     <div id="myacc-container">
         <form method="post" id="myacc-form">
             {% csrf_token %}
@@ -66,13 +33,5 @@
 
         </form>
     </div>
-
-
-
-
-
-
-
-
 
 {% endblock %}
