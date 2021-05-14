@@ -44,3 +44,4 @@ def make_checkout(request, purches_id):
 
 def empty_basket(request):
     Basket.objects.filter(user_id=request.user.id).delete()
+
