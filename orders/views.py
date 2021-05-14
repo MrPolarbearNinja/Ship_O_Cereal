@@ -3,6 +3,8 @@ from checkout.models import Purchase_History
 
 
 def orders(request):
+    # The vieww to get to the order history page
+
     success = False
     #Only to display the success massage
     if 'success' in request.GET:

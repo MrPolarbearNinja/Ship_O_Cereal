@@ -3,14 +3,10 @@ from basket.models import Basket
 from product_info.models import Item_Stock
 
 def basket(request):
-    if request.method == 'POST':
-        print(1)
-        print(request.user.id)
-        print(request.POST)
-
+    # The view basket page
     total = 0
-    basket = Basket.objects.all().filter(user=request.user.id)
-    for item in basket:
+    current_basket = Basket.objects.all().filter(user=request.user.id)
+    for item in current_basket:
         total += item.item.price
 
     return render(request, 'basket/basket.html', {
@@ -19,6 +15,8 @@ def basket(request):
     })
 
 def delete_from_basket(request, id):
+    # When a item is deleted, it goes through a page with the id of the basket item
+    # first make sure that the basked item id belongs to the user
     if Basket.objects.filter(user_id=request.user.id, id=id):
         instance = Basket.objects.get(id=id)
         instance.delete()
