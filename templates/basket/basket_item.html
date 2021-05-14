@@ -1,4 +1,50 @@
- <div class="bas-item-container">
+<div class="baskpag-item">
+
+    <a href="/product-info/{{ item.item.id }}" class="baskpag-item-link">
+        <div class="baskpag-item-image-container">
+            <img src="{{ bitem.item.items_image_set.first.image_link}}"
+                 alt="Image of {{ bitem.item.name }}"
+                 class="baskpag-item-img"
+                 width="100px"
+                 height="150x">
+        </div>
+    </a>
+
+    <div class="baskpag-item-info">
+        <h3 class="baskpag-item-title">{{ bitem.item.name }}</h3>
+        <p>Qty: <span>{{ bitem.quantity|floatformat }}</span></p>
+        <p class="baskpag-item-id">PID: {{ bitem.item_id|floatformat }}</p>
+    </div>
+
+    <div class="baskpag-item-price">
+        <h3 class="baskpag-item-title">Price</h3>
+        <div class="baskpag-item-price-info">
+            <p class="baskpag-item-f">{{ bitem.item.price|floatformat }} kr. / item</p>
+            <p>{{ bitem.item.price|floatformat }} kr. / total</p>
+        </div>
+    </div>
+
+    <div class="baskpag-item-delete">
+        <form method="post" id="Delete_from_basket">
+            {% csrf_token %}
+            <input type="submit" onclick="delete_from_basket(event, {{ bitem.id }})" class="baskpag-item-delete-button" value="&#215;" />
+        </form>
+    </div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+{% comment %} <div class="bas-item-container">
      <a href="/product-info/{{ item.item.id }}" class="cat-item">
 
         <div class="bas-item-img-container">
@@ -18,6 +64,6 @@
             {% csrf_token %}
             <input type="submit" onclick="delete_from_basket(event, {{ bitem.id }})" class="btn btn-primary" value="DELETE" />
         </form>
-    </div>
+    </div>{% endcomment %}
 
 
