@@ -9,8 +9,9 @@
             {% else %}
                 {% for item in basket %}
                     {% include 'basket/basket_item.html' with bitem=item%}
-            {% endfor %}
-        <button id="buy-button" onclick="window.location.href='/checkout'">Buy</button>
+                {% endfor %}
+                <h1> Total: {{ total|floatformat }}kr.</h1>
+            <button id="buy-button" onclick="window.location.href='/checkout'">Buy</button>
             {% endif %}
 
         </div>

@@ -7,6 +7,11 @@ from django.urls import reverse
 
 # Create your views here.
 def index(request):
+    invalid = False
+    # Only to display the invalid massage
+    if 'invalid' in request.GET:
+        invalid = True
+
     if request.method == 'POST':
         if request.method == 'POST':
             form = Purchase_Histoyry_Form(data=request.POST)
@@ -17,10 +22,11 @@ def index(request):
                 make_checkout(request, task.id)
                 empty_basket(request)
             else:
-                return redirect('/checkout')
+                return redirect('/checkout/?invalid=true')
         return redirect('review', task.id)
     return render(request, 'checkout/checkout.html', {
-        'form': Purchase_Histoyry_Form()
+        'form': Purchase_Histoyry_Form(),
+        'invalid': invalid
     })
 
 def make_purchase(request, id):
@@ -33,9 +39,16 @@ def make_purchase(request, id):
         purches.confirmed = True
         purches.save()
         return redirect('/orders/?success=True')
+
+    total = 0
+    checkout = Checkout.objects.all().filter(user=request.user.id, purchase_id=id)
+    for item in checkout:
+        total += item.items.price
+
     return render(request, 'checkout/review.html', {
         'purches_info': purches,
-        'checkout': Checkout.objects.all().filter(user=request.user.id, purchase_id=id)
+        'checkout': checkout,
+        'total': total
     })
 
 def make_checkout(request, purches_id):
