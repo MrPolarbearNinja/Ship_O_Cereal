@@ -2,8 +2,12 @@
 {% block content %}
 
     <div id="order-container">
-        <h1>My Purchase History</h1>
+        <!-- If you are sent from the purches screen, Success will be displayed -->
+        {% if success == True %}
+            <h1 id="order-green">Success</h1>
+        {% endif %}
 
+        <h1>My Purchase History</h1>
         <div id="order-links">
             {% if orders|length == 0 %}
                 <p id="orders-empty">No orders yet! Your overviews will appear here after purchasing.</p>
