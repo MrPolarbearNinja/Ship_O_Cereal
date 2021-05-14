@@ -28,7 +28,8 @@ class Purchase_History(models.Model):
     confirmed = models.BooleanField(default=False)
     card_holder = models.CharField(max_length=255)
     card_number = models.FloatField()
-    card_exp = models.DateTimeField(auto_now_add=True)
+    card_exp_month = models.FloatField()
+    card_exp_year = models.FloatField()
     card_cvc = models.FloatField()
 
 
