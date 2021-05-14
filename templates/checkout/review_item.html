@@ -1,0 +1,16 @@
+ <div class="bas-item-container">
+        <div class="bas-item-img-container">
+            <h1>{{ citem.id }}</h1>
+            <img src="{{ citem.items.items_image_set.first.image_link}}"
+                 alt="Image of {{ citem.items.name }}"
+                 class="bas-item-img"
+                 width="100px"
+                 height="150x">
+        </div>
+
+        <div class="cat-item-basket">
+            <h4>{{ citem.items.name }}</h4>
+        </div>
+    </div>
+
+

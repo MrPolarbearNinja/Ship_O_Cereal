@@ -29,18 +29,19 @@ def get_item_by_id(request, id):
     })
 
 def add_to_basket(request,id,qty):
-
-    if not Basket.objects.filter(user_id=request.user.id, item_id=id):
-        Bask = Basket(quantity=qty, user_id=request.user.id, item_id=id)
-        Bask.save()
-    else:
-        Bask_update = Basket.objects.get(user_id=request.user.id, item_id=id)
-        Bask_update.quantity = Bask_update.quantity + qty
-        Bask_update.save()
-
-    item = Item_Stock.objects.get(item_id=id)
-    item.quantity -= qty
-    item.save()
+    item_stock = Item_Stock.objects.get(item_id=id)
+    #checks if there is available stock for this product
+    if (item_stock.quantity > 0):
+        if not Basket.objects.filter(user_id=request.user.id, item_id=id):
+            Bask = Basket(quantity=qty, user_id=request.user.id, item_id=id)
+            Bask.save()
+        else:
+            Bask_update = Basket.objects.get(user_id=request.user.id, item_id=id)
+            Bask_update.quantity = Bask_update.quantity + qty
+            Bask_update.save()
+        #Removes from the stock
+        item_stock.quantity -= qty
+        item_stock.save()
 
     return redirect('/product-info/'+str(id))
 

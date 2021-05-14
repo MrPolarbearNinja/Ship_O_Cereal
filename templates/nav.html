@@ -16,7 +16,7 @@
         <ul id="nav-list">
             {% if user.is_authenticated %}
                 <li><a href="{% url 'profile' %}">My account</a></li>
-                <li><a href="#">My orders</a></li>
+                <li><a href="{% url 'orders' %}">My orders</a></li>
                 <li><a href="{% url 'logout' %}"><strong>Log out</strong></a></li>
             {% else %}
                 {% if request.path != '/account/login'%}
