@@ -2,7 +2,9 @@
 {% block content %}
 
     <!-- History div -->
-    {% include 'history/history_bar.html' %}
+    {% if user.is_authenticated %}
+          {% include 'history/history_bar.html' %}
+        {% endif %}
 
     <!-- Main div // Item detail box -->
     <div id="itemdet-container">
@@ -37,7 +39,8 @@
                 </div>
             </div>
         </div>
-        <div id="itemdet-lower">
+        {% if user.is_authenticated %}
+            <div id="itemdet-lower">
             <div id="itemdet-buttons">
                 <div id="itemdet-add-to-bask-div">
                     <button id="itemdet-b-add-to-bask" onclick="add_to_basket({{ item.id }})">Add to basket</button>
@@ -51,10 +54,17 @@
                 </div>
             </div>
         </div>
+            {% else %}
+            <h1><a href="../account/login">Login</a> or <a href="../account/register">Sign up</a> to buy this product</h1>
+        {% endif %}
+
     </div>
 
 
     <!-- Basket div -->
-    {% include 'basket_button.html' %}
 
+    {% if user.is_authenticated %}
+        {% include 'basket_button.html' %}
+        
+        {% endif %}
 {% endblock %}
