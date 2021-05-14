@@ -28,7 +28,7 @@ class Purchase_History(models.Model):
     country = models.ForeignKey(Country, on_delete=models.CASCADE)
     confirmed = models.BooleanField(default=False)
     card_holder = models.CharField(max_length=255)
-    card_number = models.IntegerField(validators=[MinValueValidator(1000000000000000), MaxValueValidator(9999999999999999)])
+    card_number = models.BigIntegerField(validators=[MinValueValidator(1000000000000000), MaxValueValidator(9999999999999999)])
     card_exp_month = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(99)])
     card_exp_year = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(99)])
     card_cvc = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(999)])
