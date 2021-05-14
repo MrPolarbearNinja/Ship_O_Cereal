@@ -49,7 +49,7 @@ def make_purchase(request, id):
     total = 0
     checkout = Checkout.objects.all().filter(user=request.user.id, purchase_id=id)
     for item in checkout:
-        total += item.items.price
+        total += item.items.price * item.quantity
 
     return render(request, 'checkout/review.html', {
         'purches_info': purchase,

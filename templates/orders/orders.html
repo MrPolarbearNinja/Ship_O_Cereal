@@ -14,7 +14,11 @@
             {% endif %}
 
             {% for order in orders %}
-                <a href="/checkout/review/{{ order.id }}">Order nr: {{ order.id }}</a>
+                {% if order.confirmed == True %}
+                    <a href="/checkout/review/{{ order.id }}">Order nr: {{ order.id }} - Confirmed purchase</a>
+                    {% else %}
+                    <a href="/checkout/review/{{ order.id }}">Order nr: {{ order.id }} - Waiting conformation</a>
+                {%  endif %}
             {% endfor %}
         </div>
     </div>

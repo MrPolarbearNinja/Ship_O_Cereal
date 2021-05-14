@@ -11,7 +11,7 @@
     <div class="rev-item-desc">
         <h4>{{ citem.items.name }}</h4>
         <p>Qty: {{ citem.quantity|floatformat }}</p>
-        <p>Price: {{ citem.items.price|floatformat }} kr.</p>
+        <p>Price: {% widthratio citem.items.price 1 citem.quantity %} kr.</p>
     </div>
 
 
