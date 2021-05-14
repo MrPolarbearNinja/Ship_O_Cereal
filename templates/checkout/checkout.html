@@ -51,8 +51,12 @@
                     </label>
                 </div>
                 <div id="checkout-c-lower" class="checkout-info">
-                    <label for="id_card_exp">Expiry
-                        {{ form.card_exp }}
+                    <label for="id_card_exp">Expiry date
+                        <div id="checkout-exp">
+                            {{ form.card_exp_month }}
+                            <p> / </p>
+                            {{ form.card_exp_year }}
+                        </div>
                     </label>
                     <label for="id_card_cvc">CVC
                         {{ form.card_cvc }}
