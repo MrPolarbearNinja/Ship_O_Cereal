@@ -3,7 +3,7 @@ function inc_qty () {
     var qty = document.getElementById("itemdet-qty-curr");
     var max_qty = document.getElementById("itemdet-stock-quant");
     var number = qty.innerHTML;
-    if (number != max_qty.innerHTML || max_qty.innerHTML == 0 ) {
+    if (number != max_qty.innerHTML && max_qty.innerHTML != '0' ) {
         number++;
         qty.innerHTML = number;
     }
