@@ -1,40 +1,85 @@
-#search-div {
-    width: 100%;
-    background-color: #CFD8DC;
+#cat-search-container {
+    margin-top: 75px;
+    padding: 0 20px;
+    background-color: var(--blue-grey);
+    height: 150px;
+    border-radius: 10px 10px 0 0;
+}
+
+#cat-search-form {
     display: flex;
+    flex: 1;
     flex-direction: column;
 }
 
-#search-form {
-    width: 100%;
-    background-color: #CFD8DC;
+#cat-search-title h2 {
+    color: var(--white);
+    margin: 20px 0 0 0;
+}
+
+
+
+#cat-search-input {
+    margin: 10px 0;
+}
+
+#cat-search-box {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-left: 1em;
-    margin-top: 1em;
-    vertical-align: middle;
+    flex-grow: 1;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
 }
 
-#search-div input[type=search] {
-    width: 50%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+#cat-search-box::placeholder {
+    padding-left: 10px;
 }
 
-#search-div input[type=radio] {
-    float: left;
-    width: auto;
-    margin-left: 3em;
+/* todo: make input text have padding */
 
+.cat-search-button {
+    width: 100px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: var(--grey);
+    border:none;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
-#search-div input[type=submit] {
-    float: left;
-    width: auto;
-    margin-left: 3em;
+.cat-search-button:hover {
+    background-color: var(--white);
+}
+
+
+
+#cat-search-filters {
+    margin-top: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#cat-search-f-type label {
+    display: flex;
+    align-items: center;
+    padding-right: 30px;
+}
+
+#cat-search-f-type label input {
+    cursor: pointer;
+}
+
+#cat-search-f-sort p {
+    margin: 0;
+    padding-right: 5px;
+}
+
+#cat-search-f-name, #cat-search-f-price {
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+#cat-search-f-name:hover, #cat-search-f-price:hover {
+    background-color: var(--white);
+    color: var(--black);
 }

@@ -1,0 +1,44 @@
+
+<form id="cat-search-form" onsubmit="search_items(event)">
+
+    <div id="cat-search-title">
+        <h2>Search for cereal</h2>
+    </div>
+
+    <div id="cat-search-input">
+        <input type="search" id="cat-search-box" placeholder="Enter item name here...">
+        <input type="submit" class="cat-search-button" value="Search">
+    </div>
+
+    <div id="cat-search-filters">
+        <div id="cat-search-f-type">
+            <label for="type">Sugary
+                <input type="radio" name="type-radio" value="1" onclick="search_items(event)">
+            </label>
+
+            <label for="type">Vegan
+                <input type="radio" name="type-radio" value="2" onclick="search_items(event)">
+            </label>
+
+            <label for="type">Healthy
+                <input type="radio" name="type-radio" value="3" onclick="search_items(event)">
+            </label>
+
+            <label for="type">Low-Carb
+                <input type="radio" name="type-radio" value="4" onclick="search_items(event)">
+            </label>
+        </div>
+
+        <div id="cat-search-f-sort">
+            <p>Sort items by: </p>
+            <input type="button" class="cat-search-button" id="cat-search-f-name" name="sort-by-name" value="Name" onclick="sort_by_name_func(event)">
+            <input type="button" class="cat-search-button" id="cat-search-f-price" name="sort-by-price" value="Price" onclick="sort_by_price_func(event)">
+        </div>
+    </div>
+
+
+
+</form>
+
+
+

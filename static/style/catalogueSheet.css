@@ -4,17 +4,7 @@
     margin: 0 60px;
 }
 
-#cat-search-container {
-    margin-top: 75px;
-    padding: 0 20px;
-    background-color: var(--blue-grey);
-    height: 150px;
-    border-radius: 10px 10px 0 0;
-}
-
-#cat-search-container h2 {
-    color: var(--white);
-}
+/* cat-search-container is in searchSheet.css */
 
 #cat-list {
     display: grid;
