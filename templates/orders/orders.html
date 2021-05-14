@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
-    <!-- Main div // Item detail box -->
 
-        <div id="orders-container">
-        <h1>My Purches History</h1>
+    <div id="order-container">
+        <h1>My Purchase History</h1>
+
+        <div id="order-links">
+            {% if orders|length == 0 %}
+                <p id="orders-empty">No orders yet!</p>
+            {% endif %}
+
             {% for order in orders %}
                 <a href="/checkout/review/{{ order.id }}">Order nr: {{ order.id }}</a>
             {% endfor %}
         </div>
+    </div>
 
 {% endblock %}

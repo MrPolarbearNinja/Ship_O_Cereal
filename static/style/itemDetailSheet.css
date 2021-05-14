@@ -4,6 +4,15 @@
     width: 60%;
 }
 
+#itemdet-container a {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+#itemdet-container a:hover {
+    color: var(--blue-dark);
+}
+
 #itemdet-upper {
     padding-bottom: 25px;
     border-bottom: 2px solid var(--blue-dark);

@@ -3,6 +3,7 @@
     /* Colors from Material-UI palette (https://material-ui.com/customization/color/)
        Use colors by writing ' color: var(--color); '*/
 
+    --blue-light: #90CAF9;      /* blue 200 */
     --blue: #42A5F5;			/* blue 400 */
     --blue-dark: #1976D2;		/* blue 700 */
     --blue-grey: #CFD8DC;		/* blueGrey 100 */

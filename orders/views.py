@@ -3,5 +3,5 @@ from checkout.models import Purchase_History
 
 
 def orders(request):
-    context = {'orders': Purchase_History.objects.filter(user_id=request.user.id)}
+    context = {'orders': Purchase_History.objects.filter(user_id=request.user.id).order_by('-id')}
     return render(request, 'orders/orders.html', context)
