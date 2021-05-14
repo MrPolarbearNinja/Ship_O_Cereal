@@ -39,7 +39,7 @@ def make_purchase(request, id):
 def make_checkout(request, purches_id):
     basket = Basket.objects.filter(user_id=request.user.id)
     for row in basket:
-        check = Checkout(purchase_id=purches_id, items_id=row.item_id, user_id=request.user.id)
+        check = Checkout(purchase_id=purches_id, items_id=row.item_id, user_id=request.user.id, quantity=row.quantity)
         check.save()
 
 def empty_basket(request):
