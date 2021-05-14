@@ -2,3 +2,7 @@
 #review-container {
     flex-direction: column;
 }
+#review-card-info {
+    flex-direction: column;
+    border-top: 2px solid #263238;
+}

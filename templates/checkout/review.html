@@ -7,13 +7,18 @@
     </div>
     <div id="review-container">
         <h1>Review</h1>
-        <p>{{ purches_info.firstName }}</p>
-        <p>{{ purches_info.lastName }}</p>
-        <p>{{ purches_info.streetName }}</p>
-        <p>{{ purches_info.streetNumber }}</p>
-        <p>{{ purches_info.city }}</p>
-        <p>{{ purches_info.country }}</p>
-        <p>{{ purches_info.zip|floatformat }}</p>
+        <p><b>Fyrst Name:</b> {{ purches_info.firstName }}</p>
+        <p><b>Last Name:</b> {{ purches_info.lastName }}</p>
+        <p><b>Street Name:</b> {{ purches_info.streetName }}</p>
+        <p><b>Street Number:</b> {{ purches_info.streetNumber }}</p>
+        <p><b>City:</b> {{ purches_info.city }}</p>
+        <p><b>Country:</b> {{ purches_info.country }}</p>
+        <p><b>ZIP:</b> {{ purches_info.zip|floatformat }}</p>
+
+        <div id="review-card-info">
+        <p><b>Card Holder:</b> {{ purches_info.card_holder }}</p>
+        <p><b>Card Number:</b> {{ purches_info.card_number }}</p>
+        </div>
         <form method="post">
             {% csrf_token %}
             {% if purches_info.confirmed == False %}
