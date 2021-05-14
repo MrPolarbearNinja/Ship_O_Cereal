@@ -51,6 +51,12 @@ def index(request):
     else:
         context = {'Items': Items.objects.all().order_by('id').order_by(sort_by)}
 
+    curent_basket = Basket.objects.all().filter(user=request.user.id)
+    bask_total = 0
+    for bitem in curent_basket:
+        bask_total += bitem.quantity
+
     context['history'] = History.objects.all().filter(user=request.user.id).order_by('-time')[0:3]
-    context['basket'] = Basket.objects.all().filter(user=request.user.id)
+    context['basket'] = curent_basket
+    context['bask_total'] = bask_total
     return render(request, 'catalogue/catalogue.html', context)

@@ -14,9 +14,9 @@ def index(request):
 
 
 def get_item_by_id(request, id):
-    # To see a specifit item, we go through here
+    # To see a specific item, we go through here
     if request.user.is_authenticated:
-        # If the user is loged in, we add the browsed item to the user browsing history
+        # If the user is lodged in, we add the browsed item to the user browsing history
         if not History.objects.filter(user_id=request.user.id, item_id=id):
             hist = History(time=time.time(), user_id=request.user.id, item_id=id)
             hist.save()
@@ -26,10 +26,16 @@ def get_item_by_id(request, id):
             hist_update.time = time.time()
             hist_update.save()
 
+    bask_total = 0
+    curent_basket = Basket.objects.all().filter(user=request.user.id)
+    for bitem in curent_basket:
+        bask_total += bitem.quantity
+
     return render(request, 'product_info/item_detail.html', {
         'item': get_object_or_404(Items, pk=id),
         'history': History.objects.all().filter(user=request.user.id).order_by('-time')[0:3],
-        'basket': Basket.objects.all().filter(user=request.user.id)
+        'basket': curent_basket,
+        'bask_total': bask_total
     })
 
 
