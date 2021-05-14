@@ -2,7 +2,7 @@
 
 
 function search_items(event, order_by = ''){
-    var namne = document.getElementById("search-box").value
+    var namne = document.getElementById("cat-search-box").value
     var type = ''
     var radios = document.getElementsByName('type-radio');
 
