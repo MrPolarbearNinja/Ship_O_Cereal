@@ -17,7 +17,7 @@
 
         <div id="review-card-info">
         <p><b>Card Holder:</b> {{ purches_info.card_holder }}</p>
-        <p><b>Card Number:</b> {{ purches_info.card_number }}</p>
+        <p><b>Card Number:</b> {{ purches_info.card_number|floatformat }}</p>
         </div>
         <form method="post">
             {% csrf_token %}
