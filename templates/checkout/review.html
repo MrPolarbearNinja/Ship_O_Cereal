@@ -8,6 +8,7 @@
             <h2>Order nr: {{ purches_info.id }}</h2>
         </div>
 
+        <!-- Entered information about the customer -->
         <div id="rev-content">
             <div id="rev-info">
                 <h3>Customer information</h3>
@@ -27,6 +28,8 @@
                     <p><span>Card number:</span> {{ purches_info.card_number|floatformat }}</p>
                 </div>
             </div>
+
+            <!-- Details about the items in the basket -->
             <div id="rev-bask">
                 <h3>Items ordered</h3>
 
@@ -47,8 +50,8 @@
                     <input type="submit" class="review-submit" value="Confirm purchase">
                 </div>
             {% endif %}
-
         </form>
 
     </div>
+
 {% endblock %}

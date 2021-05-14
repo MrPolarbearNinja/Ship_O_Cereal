@@ -1,4 +1,3 @@
-
 function inc_qty () {
     var qty = document.getElementById("itemdet-qty-curr");
     var max_qty = document.getElementById("itemdet-stock-quant");
@@ -23,12 +22,5 @@ function add_to_basket(item_id) {
     var qty = document.getElementById("itemdet-qty-curr");
     var number = qty.innerHTML;
 
-    /*INSERT GET QTY FROM BASKET THEN ADD TO CURRENT QTY*/
-    /*GET CURRENT QTY IN BASKET AND CHANGE NUMBER ON ICON*/
-    /*CHECK STOCK STATUS*/
-
-
-
     window.location.href = 'basket/' + item_id + '/' + number
-
 }

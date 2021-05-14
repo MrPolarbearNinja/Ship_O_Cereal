@@ -1,4 +1,3 @@
-
 <form id="cat-search-form" onsubmit="search_items(event)">
 
     <div id="cat-search-title">
@@ -11,6 +10,8 @@
     </div>
 
     <div id="cat-search-filters">
+
+        <!-- Radio button filters -->
         <div id="cat-search-f-type">
             <label for="type">Sugary
                 <input type="radio" name="type-radio" value="1">
@@ -29,14 +30,12 @@
             </label>
         </div>
 
+        <!-- Sort items filter -->
         <div id="cat-search-f-sort">
             <p>Sort items by: </p>
             <input type="button" class="cat-search-button" id="cat-search-f-name" name="sort-by-name" value="Name" onclick="sort_by_name_func(event)">
             <input type="button" class="cat-search-button" id="cat-search-f-price" name="sort-by-price" value="Price" onclick="sort_by_price_func(event)">
         </div>
+
     </div>
-
 </form>
-
-
-

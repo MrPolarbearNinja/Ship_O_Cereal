@@ -10,8 +10,6 @@
     color: var(--white);
 }
 
-
-/* AA */
 #nav-logo {
     display: flex;
     align-items: center;
@@ -27,7 +25,6 @@
     padding-left: 25px;
 }
 
-/* AB */
 #nav-list-container {
     align-items: center;
 }

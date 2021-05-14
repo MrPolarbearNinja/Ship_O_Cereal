@@ -1,13 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <!-- History div-->
+    <!-- View history -->
     {% if user.is_authenticated %}
-          {% include 'history/history_bar.html' %}
-        {% endif %}
+        {% include 'history/history_bar.html' %}
+    {% endif %}
 
-
-    <!-- Catalogue div -->
+    <!-- Catalogue (main container) -->
     <div id="cat-container">
         <div id="cat-search-container">
             {% include 'catalogue/catalogue_search.html' %}

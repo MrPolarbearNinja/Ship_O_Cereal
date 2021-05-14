@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <!-- History div -->
+    <!-- View history -->
     {% if user.is_authenticated %}
         {% include 'history/history_bar.html' %}
     {% endif %}
 
-    <!-- Main div -->
+    <!-- Item detail (main container) -->
     <div id="itemdet-container">
+
         <div id="itemdet-upper">
             <div id="itemdet-image-container">
                 <img src="{{ item.items_image_set.first.image_link }}"
@@ -16,16 +17,16 @@
                      width="240px"
                      height="348px">
             </div>
-            <div id="itemdet-product">
 
+            <div id="itemdet-product">
                 <div id="itemdet-title">
                     <h1>{{  item.name  }}</h1>
                     <p><strong>Price: {{  item.price|floatformat  }} kr</strong></p>
                     <p>PID: {{  item.id  }}</p> <!-- Product ID -->
                     <p>Stock left: <span id="itemdet-stock-quant">{{ item.item_stock_set.first.quantity|floatformat }}</span></p>
                 </div>
-
             </div>
+
             <div id="itemdet-description">
                 <h2>Description</h2>
                 <p>{{ item.description }}</p>
@@ -47,9 +48,11 @@
                     <div id="itemdet-add-to-bask-div">
                         <button id="itemdet-b-add-to-bask" onclick="add_to_basket({{ item.id }})">Add to basket</button>
                     </div>
+
                     <div id="itemdet-quantity-val-div">
                         <h2 id="itemdet-qty-curr">1</h2>
                     </div>
+
                     <div id="itemdet-quantity-buttons-div">
                         <button id="itemdet-b-inc" onclick="inc_qty()">+</button>
                         <button id="itemdet-b-dec" onclick="dec_qty()">-</button>
@@ -58,12 +61,12 @@
             </div>
 
         {% else %}
-            <h2><a href="../account/login">Log in</a> or <a href="../account/register">Sign up</a> to buy this product.</h2>
+            <h2 id="itemdet-login"><a href="../account/login">Log in</a> or <a href="../account/register">Sign up</a> to buy this product.</h2>
         {% endif %}
 
     </div>
 
-    <!-- Basket div -->
+    <!-- Basket -->
     {% if user.is_authenticated %}
         {% include 'basket_button.html' %}
     {% endif %}

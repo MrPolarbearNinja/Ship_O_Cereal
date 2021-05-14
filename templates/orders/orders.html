@@ -2,7 +2,8 @@
 {% block content %}
 
     <div id="order-container">
-        <!-- If you are sent from the purchase screen, success will be displayed -->
+
+        <!-- Display only if you are sent from the purchase screen -->
         {% if success == True %}
             <h3 id="order-green">Success! Your order is now on the way.</h3>
         {% endif %}
@@ -21,6 +22,7 @@
                 {%  endif %}
             {% endfor %}
         </div>
+
     </div>
 
 {% endblock %}

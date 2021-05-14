@@ -1,6 +1,7 @@
 <a href="/product-info/{{ item.id }}" class="cat-item">
     <div class="cat-item-container">
 
+        <!-- Image of product -->
         <div class="cat-item-img-container">
             <img src="{{ item.items_image_set.first.image_link}}"
                  alt="Image of {{ item.name }}"
@@ -9,6 +10,7 @@
                  height="290px">
         </div>
 
+        <!-- Details about the item -->
         <div class="cat-item-desc">
             <h4>{{ item.name }}</h4>
             <p>{{ item.price|floatformat }} kr</p>

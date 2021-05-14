@@ -1,6 +1,3 @@
-
-
-
 function search_items(event, order_by = ''){
     var namne = document.getElementById("cat-search-box").value
     var type = ''
@@ -31,12 +28,12 @@ function search_items(event, order_by = ''){
 
     window.location.href = my_url
     event.preventDefault()
-  }
+}
 
-  function sort_by_name_func(event) {
+function sort_by_name_func(event) {
     search_items(event, 'sort_by_name=1')
-  }
+}
 
-  function sort_by_price_func(event) {
+function sort_by_price_func(event) {
     search_items(event, 'sort_by_price=1')
-  }
+}

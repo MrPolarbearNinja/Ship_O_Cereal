@@ -6,6 +6,8 @@
             {% csrf_token %}
 
             <div id="myacc-info">
+
+                <!-- Edit personal information -->
                 <div id="myacc-profile">
                     <h1>Edit profile</h1>
                     <div id="myacc-form-container">
@@ -18,12 +20,14 @@
                     </div>
                 </div>
 
+                <!-- Edit photo -->
                 <div id="myacc-image-container">
                     <img src="{{ user.user.image }}"
                          alt="Image of user: {{ user.username }}"
                          id="myacc-img"
                          height="250px">
                 </div>
+
             </div>
 
             <div id="myacc-button">

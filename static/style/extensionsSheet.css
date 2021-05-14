@@ -1,7 +1,6 @@
 /* CSS File containing the search history and basket extensions */
 
 /* History tab */
-
 #hist-container {
     flex-direction: column;
     width: 200px;
@@ -40,7 +39,6 @@
     color: var(--grey-dark);
 }
 
-
 /* History item */
 .hist-item {
     margin: auto;
@@ -73,9 +71,6 @@
 .hist-item-img:hover {
     filter: drop-shadow(0 0 5px gray);
 }
-
-
-
 
 
 

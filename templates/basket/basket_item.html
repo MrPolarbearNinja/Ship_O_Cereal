@@ -1,5 +1,6 @@
 <div class="baskpag-item">
 
+    <!-- Image of item -->
     <a href="/product-info/{{ item.item.id }}" class="baskpag-item-link">
         <div class="baskpag-item-image-container">
             <img src="{{ bitem.item.items_image_set.first.image_link}}"
@@ -10,12 +11,14 @@
         </div>
     </a>
 
+    <!-- Information about the item -->
     <div class="baskpag-item-info">
         <h3 class="baskpag-item-title">{{ bitem.item.name }}</h3>
         <p>Qty: <span>{{ bitem.quantity|floatformat }}</span></p>
         <p class="baskpag-item-id">PID: {{ bitem.item_id|floatformat }}</p>
     </div>
 
+    <!-- Price for the item -->
     <div class="baskpag-item-price">
         <h3 class="baskpag-item-title">Price</h3>
         <div class="baskpag-item-price-info">
@@ -24,17 +27,13 @@
         </div>
     </div>
 
+    <!-- Delete button, to remove the item from basket -->
     <div class="baskpag-item-delete">
         <form method="post" id="Delete_from_basket">
             {% csrf_token %}
             <input type="submit" onclick="delete_from_basket(event, {{ bitem.id }})" class="baskpag-item-delete-button" value="&#215;" />
         </form>
     </div>
-
-
-
-
-
 
 </div>
 

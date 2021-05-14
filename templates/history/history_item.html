@@ -1,34 +1,11 @@
 <a href="/product-info/{{ history.item.id }}" class="hist-item">
-    <div class="hist-item-container">
-        <div class="hist-item-img-container">
-            <img src="{{ history.item.items_image_set.first.image_link}}"
-                 alt="Image of {{ history.item.name }}"
-                 class="hist-item-img"
-                 width="80px"
-                 height="116px">
-        </div>
 
+    <div class="hist-item-container">
+        <img src="{{ history.item.items_image_set.first.image_link}}"
+             alt="Image of {{ history.item.name }}"
+             class="hist-item-img"
+             width="80px"
+             height="116px">
     </div>
+
 </a>
-
-{% comment %}<a href="/product-info/{{ history.item.id }}">
-    <div class="hist-item-container">
-
-        <div class="hist-item-image-div">
-            <img src="{{ history.item.items_image_set.first.image_link}}"
-                 alt="Image of {{ history.item.name }}"
-                 class="hist-item-img"
-                 width="80px"
-                 height="116px">
-        </div>
-
-        <div class="hist-item-desc">
-
-        </div>
-
-    </div>
-</a>{% endcomment %}
-
-
-
-

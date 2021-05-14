@@ -20,7 +20,6 @@
 
 
 /* Catalogue item */
-
 .cat-item {
     display: flex;
     margin: auto;
@@ -48,7 +47,6 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-
 
 .cat-item-desc {
     background-color: var(--blue);

@@ -6,7 +6,7 @@ from basket.models import Basket
 
 # Create your views here.
 def index(request):
-    # The catalog, with a search handling
+    # The catalogue, with search handling
     sort_by = 'id'
     # The default sort by is id, if there is a request for other sort_by, it will be changed to that
     if 'sort_by_price' in request.GET:
@@ -21,7 +21,7 @@ def index(request):
             sort_by = '-name'
 
     # Search by name and type handling
-    # first checks if we are searching with both name and type
+    # First checks if we are searching with both name and type
     if ('search_filter' in request.GET and 'search_type' in request.GET):
         context = {}
         context1 = {'Items': None}
@@ -36,7 +36,7 @@ def index(request):
         # Merge together the name and type search
         context['Items'] = context1['Items'] & context2['Items']
 
-    # here we check if it ether type or name
+    # Here we check if it is ether type or name
     elif ('search_filter' in request.GET or 'search_type' in request.GET):
         if 'search_filter' in request.GET:
             search_filter = request.GET['search_filter']
@@ -47,7 +47,7 @@ def index(request):
         else:
             context = {'Items': Items.objects.all().order_by('id').order_by(sort_by)}
 
-    # Here if there is nether name or type
+    # Here, if it is neither name or type
     else:
         context = {'Items': Items.objects.all().order_by('id').order_by(sort_by)}
 

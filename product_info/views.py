@@ -9,7 +9,7 @@ import time
 
 # Create your views here.
 def index(request):
-    # if you get here, you are at the wrong place, but will send you to the main page
+    # If you get here, you are at the wrong place, but will send you to the main page
     return redirect('/')
 
 
@@ -20,7 +20,7 @@ def get_item_by_id(request, id):
         if not History.objects.filter(user_id=request.user.id, item_id=id):
             hist = History(time=time.time(), user_id=request.user.id, item_id=id)
             hist.save()
-        # if it's already in the history, we only need to update the timer
+        # If it is already in the history, we only need to update the timer
         else:
             hist_update = History.objects.get(user_id=request.user.id, item_id=id)
             hist_update.time = time.time()
@@ -41,7 +41,7 @@ def get_item_by_id(request, id):
 
 def add_to_basket(request, id, qty):
     item_stock = Item_Stock.objects.get(item_id=id)
-    # checks if there is available stock for this product
+    # Checks if there is available stock for this product
     if (item_stock.quantity > 0):
         if not Basket.objects.filter(user_id=request.user.id, item_id=id):
             Bask = Basket(quantity=qty, user_id=request.user.id, item_id=id)
@@ -55,5 +55,3 @@ def add_to_basket(request, id, qty):
         item_stock.save()
 
     return redirect('/product-info/' + str(id))
-
-# Create your views here.

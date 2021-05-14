@@ -45,11 +45,9 @@
     margin-right: 25px;
 }
 
-
 #checkout-location label {
     width: 30%;
 }
-
 
 #checkout-card {
     flex-direction: column;
@@ -70,7 +68,6 @@
 #checkout-exp input {
     width: 25%;
 }
-
 
 #checkout-confirm input {
     padding: 0 40px;

@@ -18,7 +18,7 @@ def index(request):
             form = Purchase_Histoyry_Form(data=request.POST)
             if form.is_valid():
                 # If the form is valid, a checkout history is made, and a checkout list is also made in the DB
-                # Then we go to the review step where th checkout table is used to show item we are about to buy
+                # Then we go to the review step where the checkout table is used to show item we are about to buy
                 task = form.save(commit=False)
                 task.user_id = request.user.id
                 task.save()
@@ -35,7 +35,7 @@ def index(request):
 def make_purchase(request, id):
     # The review page, where there will be a button to confirm the payment
     purchase = Purchase_History.objects.get(id=id)
-    # makes sure the person that is logged in is reviewing his own purchase
+    # Makes sure the person that is logged in is reviewing his own purchase
     if (purchase.user_id != request.user.id):
         return redirect('/')
 

@@ -1,4 +1,3 @@
-
 window.onload = function() {
     if (window.location.pathname === "/account/profile") {
         display_save_msg();

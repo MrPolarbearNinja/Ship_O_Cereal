@@ -61,8 +61,6 @@
     padding: 0 15px 0 5px;
 }
 
-/* LOWER */
-
 #itemdet-lower {
     padding-top: 25px;
 }
@@ -87,14 +85,10 @@
     color: var(--white);
 }
 
-
-
 #itemdet-add-to-bask-div {
     flex-grow: 1;
     border-right: 2px solid var(--purple-dark);
 }
-
-
 
 #itemdet-b-add-to-bask {
     flex-grow: 1;
@@ -131,4 +125,8 @@
 #itemdet-b-dec:hover {
     background-color: var(--purple-dark);
     border-radius: 0 0 10px 0;
+}
+
+#itemdet-login {
+    margin-top: 20px;
 }

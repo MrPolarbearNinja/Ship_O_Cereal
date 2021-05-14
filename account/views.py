@@ -25,9 +25,9 @@ def Profile(request):
     })
 
 def register(request):
-    # view to make an acount
+    # View to make an account
     image_link = "https://cdn.discordapp.com/attachments/834167476241301524/842356421542674462/default-user-image.png"
-    # image link to the default user image
+    # Image link to the default user image
     if request.method == 'POST':
         form = UserCreationForm(data=request.POST)
         if form.is_valid():

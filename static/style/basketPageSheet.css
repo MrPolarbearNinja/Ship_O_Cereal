@@ -63,8 +63,9 @@
     background-color: var(--green);
 }
 
-/* Items in basket */
 
+
+/* Items in basket */
 .baskpag-item {
     padding-bottom: 30px;
     margin-bottom: 30px;

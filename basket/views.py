@@ -15,8 +15,8 @@ def basket(request):
     })
 
 def delete_from_basket(request, id):
-    # When a item is deleted, it goes through a page with the id of the basket item
-    # first make sure that the basked item id belongs to the user
+    # When an item is deleted, it goes through a page with the id of the basket item
+    # First, make sure that the basket item id belongs to the user
     if Basket.objects.filter(user_id=request.user.id, id=id):
         instance = Basket.objects.get(id=id)
         instance.delete()

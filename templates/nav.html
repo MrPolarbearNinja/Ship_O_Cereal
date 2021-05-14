@@ -2,6 +2,7 @@
 
 <div id="nav">
 
+    <!-- Logo of the website, also a button -->
     <a href="/" id="nav-logo">
         <div>
             <img src="{% static 'images/logo.svg' %}"
@@ -12,6 +13,7 @@
         </div>
     </a>
 
+    <!-- Links -->
     <div id="nav-list-container">
         <ul id="nav-list">
             {% if user.is_authenticated %}
@@ -27,6 +29,7 @@
                 {% endif %}
             {% endif %}
         </ul>
+
         {% if user.is_authenticated %}
             <a href="{% url 'profile' %}">
                 <div id="nav-account">

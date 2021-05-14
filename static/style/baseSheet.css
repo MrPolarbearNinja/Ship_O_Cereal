@@ -30,11 +30,6 @@ div {
 }
 
 #main-container {
-    background-image: none;
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-
     flex-grow: 1;
     justify-content: center;
     height: 100%;
