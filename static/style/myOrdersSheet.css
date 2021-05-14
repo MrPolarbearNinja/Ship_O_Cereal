@@ -33,11 +33,11 @@
     background-color: var(--blue-dark);
 }
 
-#order-links a:nth-child(2) {
+#order-links a:nth-child(even) {
     background-color: var(--blue-light);
 }
 
-#order-links a:nth-child(2):hover {
+#order-links a:nth-child(even):hover {
     background-color: var(--blue-dark);
 }
 

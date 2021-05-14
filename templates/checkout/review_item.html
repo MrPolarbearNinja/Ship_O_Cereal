@@ -1,4 +1,24 @@
-<a href="/product-info/{{ citem.items.id }}">
+<div class="rev-item">
+
+    <a href="/product-info/{{ citem.items.id }}">
+        <img src="{{ citem.items.items_image_set.first.image_link}}"
+             alt="Image of {{ citem.items.name }}"
+             class="rev-item-img"
+             width="100px"
+             height="150x">
+    </a>
+
+    <div class="rev-item-desc">
+        <h4>{{ citem.items.name }}</h4>
+        <p>Qty: {{ citem.quantity|floatformat }}</p>
+        <p>Price: {{ citem.items.price|floatformat }} kr.</p>
+    </div>
+
+
+
+</div>
+
+{% comment %}<a href="/product-info/{{ citem.items.id }}">
  <div class="bas-item-container">
         <div class="bas-item-img-container">
             <img src="{{ citem.items.items_image_set.first.image_link}}"
@@ -13,6 +33,6 @@
             <p>Price: {{ citem.items.price }}</p>
             <p>Quantity: {{ citem.quantity|floatformat }}</p>
         </div>
-    </div>
+    </div>{% endcomment %}
 
 
