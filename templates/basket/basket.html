@@ -13,7 +13,7 @@
             </div>
 
             <div id="baskpag-button">
-                <h2>Total: <span>10 kr.</span></h2>
+                <h2>Total: <span>{{ total|floatformat }} kr.</span></h2>
                 <button id="buy-button" onclick="window.location.href='/checkout'">Buy</button>
             </div>
         {% endif %}

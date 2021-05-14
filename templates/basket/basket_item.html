@@ -20,7 +20,7 @@
         <h3 class="baskpag-item-title">Price</h3>
         <div class="baskpag-item-price-info">
             <p class="baskpag-item-f">{{ bitem.item.price|floatformat }} kr. / item</p>
-            <p>{{ bitem.item.price|floatformat }} kr. / total</p>
+            <p>{% widthratio  bitem.item.price 1 bitem.quantity %} kr. / total</p>
         </div>
     </div>
 

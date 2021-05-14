@@ -7,7 +7,7 @@ def basket(request):
     total = 0
     current_basket = Basket.objects.all().filter(user=request.user.id)
     for item in current_basket:
-        total += item.item.price
+        total += item.item.price * item.quantity
 
     return render(request, 'basket/basket.html', {
         'basket': Basket.objects.all().filter(user=request.user.id),
