@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ShipOCereal.apps.ShipocerealConfig',
     'account.apps.AccountConfig',
     'basket.apps.BasketConfig',
     'catalogue.apps.CatalogueConfig',
