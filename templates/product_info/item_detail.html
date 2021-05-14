@@ -21,7 +21,7 @@
             <div id="itemdet-product">
                 <div id="itemdet-title">
                     <h1>{{  item.name  }}</h1>
-                    <p><strong>Price: {{  item.price|floatformat  }} kr</strong></p>
+                    <p><strong>Price: {{  item.price|floatformat  }} kr.</strong></p>
                     <p>PID: {{  item.id  }}</p> <!-- Product ID -->
                     <p>Stock left: <span id="itemdet-stock-quant">{{ item.item_stock_set.first.quantity|floatformat }}</span></p>
                 </div>
