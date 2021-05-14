@@ -4,7 +4,6 @@
     <div id="checkout-container">
         <form method="post" id="checkout-form">
             {% csrf_token %}
-
             <h1>Checkout</h1>
 
             <!-- Personal information -->
@@ -42,6 +41,9 @@
 
             <!-- Card information -->
             <div id="checkout-card">
+                {% if invalid == True %}
+                    <h3>Invalid Input</h3>
+                {% endif %}
                 <div id="checkout-c-upper" class="checkout-info">
                     <label for="id_card_holder">Card holder
                         {{ form.card_holder }}

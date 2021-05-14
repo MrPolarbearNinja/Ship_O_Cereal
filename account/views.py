@@ -11,6 +11,7 @@ def index(request):
     })
 
 def Profile(request):
+    # The view to edit the profile
     profile = User.objects.filter(user=request.user).first()
     if request.method == 'POST':
         form = Profile_Form(instance=profile, data=request.POST)
@@ -24,7 +25,9 @@ def Profile(request):
     })
 
 def register(request):
+    # view to make an acount
     image_link = "https://cdn.discordapp.com/attachments/834167476241301524/842356421542674462/default-user-image.png"
+    # image link to the default user image
     if request.method == 'POST':
         form = UserCreationForm(data=request.POST)
         if form.is_valid():

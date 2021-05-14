@@ -1,3 +1,4 @@
+<a href="/product-info/{{ citem.items.id }}">
  <div class="bas-item-container">
         <div class="bas-item-img-container">
             <img src="{{ citem.items.items_image_set.first.image_link}}"
@@ -6,9 +7,11 @@
                  width="100px"
                  height="150x">
         </div>
+     </a>
         <div class="cat-item-basket">
             <h4>{{ citem.items.name }}</h4>
-            <p>{{ citem.quantity|floatformat }}</p>
+            <p>Price: {{ citem.items.price }}</p>
+            <p>Quantity: {{ citem.quantity|floatformat }}</p>
         </div>
     </div>
 

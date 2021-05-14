@@ -27,6 +27,7 @@
         {% for item in checkout %}
             {% include 'checkout/review_item.html' with citem=item%}
         {% endfor %}
+        <h1> Total: {{ total|floatformat }}kr.</h1>
         </div>
     </div>
 {% endblock %}
