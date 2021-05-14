@@ -100,33 +100,3 @@
 .rev-item-desc p {
     margin-bottom: 0;
 }
-
-
-/*
-#review-information {
-    flex-direction: column;
-}
-#review-card-info {
-    flex-direction: column;
-    border-top: 2px solid #263238;
-}
-#review-basket {
-    flex-direction: column;
-    margin-left: 50px;
-}
-
-.review-submit {
-    width: 100px;
-    height: 30px;
-    border-radius: 5px;
-    margin-left: 10px;
-    background-color: var(--blue);
-    border:none;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-
-.review-submit:hover {
-    background-color: var(--white);
-}*/
