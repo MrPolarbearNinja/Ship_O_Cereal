@@ -3,10 +3,10 @@
 
     <!-- History div -->
     {% if user.is_authenticated %}
-          {% include 'history/history_bar.html' %}
-        {% endif %}
+        {% include 'history/history_bar.html' %}
+    {% endif %}
 
-    <!-- Main div // Item detail box -->
+    <!-- Main div -->
     <div id="itemdet-container">
         <div id="itemdet-upper">
             <div id="itemdet-image-container">
@@ -39,32 +39,33 @@
                 </div>
             </div>
         </div>
+
+        <!-- Add to basket -->
         {% if user.is_authenticated %}
             <div id="itemdet-lower">
-            <div id="itemdet-buttons">
-                <div id="itemdet-add-to-bask-div">
-                    <button id="itemdet-b-add-to-bask" onclick="add_to_basket({{ item.id }})">Add to basket</button>
-                </div>
-                <div id="itemdet-quantity-val-div">
-                    <h2 id="itemdet-qty-curr">1</h2>
-                </div>
-                <div id="itemdet-quantity-buttons-div">
-                    <button id="itemdet-b-inc" onclick="inc_qty()">+</button>
-                    <button id="itemdet-b-dec" onclick="dec_qty()">-</button>
+                <div id="itemdet-buttons">
+                    <div id="itemdet-add-to-bask-div">
+                        <button id="itemdet-b-add-to-bask" onclick="add_to_basket({{ item.id }})">Add to basket</button>
+                    </div>
+                    <div id="itemdet-quantity-val-div">
+                        <h2 id="itemdet-qty-curr">1</h2>
+                    </div>
+                    <div id="itemdet-quantity-buttons-div">
+                        <button id="itemdet-b-inc" onclick="inc_qty()">+</button>
+                        <button id="itemdet-b-dec" onclick="dec_qty()">-</button>
+                    </div>
                 </div>
             </div>
-        </div>
-            {% else %}
-            <h1><a href="../account/login">Login</a> or <a href="../account/register">Sign up</a> to buy this product</h1>
+
+        {% else %}
+            <h2><a href="../account/login">Log in</a> or <a href="../account/register">Sign up</a> to buy this product.</h2>
         {% endif %}
 
     </div>
 
-
     <!-- Basket div -->
-
     {% if user.is_authenticated %}
         {% include 'basket_button.html' %}
-        
-        {% endif %}
+    {% endif %}
+
 {% endblock %}
