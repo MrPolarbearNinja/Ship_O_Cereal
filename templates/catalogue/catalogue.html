@@ -11,6 +11,10 @@
     <div id="cat-container">
         <div id="cat-search-container">
             {% include 'catalogue/catalogue_search.html' %}
+
+            {% if Items|length == 0 %}
+                <p id="cat-search-empty">No products match your search conditions. Please try again.</p>
+            {% endif %}
         </div>
 
         <div id="cat-list">

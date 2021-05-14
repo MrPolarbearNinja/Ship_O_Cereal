@@ -1,8 +1,8 @@
 #cat-search-container {
+    flex-direction: column;
     margin-top: 75px;
     padding: 0 20px;
     background-color: var(--blue-grey);
-    height: 150px;
     border-radius: 10px 10px 0 0;
 }
 
@@ -10,6 +10,14 @@
     display: flex;
     flex: 1;
     flex-direction: column;
+    min-height: 150px;
+
+}
+
+#cat-search-empty {
+    margin-top: 0;
+    color: var(--red);
+    font-weight: bold;
 }
 
 #cat-search-title h2 {
