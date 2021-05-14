@@ -1,19 +1,26 @@
 {% extends 'base.html' %}
 {% block content %}
-    <!-- Main div // Item detail box -->
 
-        <div id="basket-container">
-            {% if basket|length == 0 %}
-                <h1>No products in basket</h1>
-                <p>See <a href="../catalogue">Products</a> in catalogue</p>
-            {% else %}
+    <div id="baskpag-container">
+        <h1>Basket</h1>
+        {% if basket|length == 0 %}
+            <p id="baskpag-empty">No items in basket.<br>See more <a href="../catalogue">products</a> in our catalogue.</p>
+        {% else %}
+            <div id="baskpag-list">
                 {% for item in basket %}
                     {% include 'basket/basket_item.html' with bitem=item%}
                 {% endfor %}
-                <h1> Total: {{ total|floatformat }}kr.</h1>
-            <button id="buy-button" onclick="window.location.href='/checkout'">Buy</button>
-            {% endif %}
+            </div>
 
-        </div>
+            <div id="baskpag-button">
+                <h2>Total: <span>10 kr.</span></h2>
+                <button id="buy-button" onclick="window.location.href='/checkout'">Buy</button>
+            </div>
+        {% endif %}
+    </div>
+
+
+
+
 
 {% endblock %}
